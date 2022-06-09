@@ -1,0 +1,106 @@
+@font-face {
+  font-family: Oswald;
+  src: url(./fonts/Oswald-Regular.ttf)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Oswald, sans-serif;
+}
+
+button {
+  border: none;
+}
+
+@media(min-width:600px)
+  {
+  .img-um {
+    display: flex;
+  }
+  .img-dois {
+    display: none;
+  }
+}
+
+@media(max-width:600px)
+  {
+  .img-um {
+    display: none;
+  }
+  .img-dois {
+    display: flex;
+  }
+}
+
+
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+}
+
+.img-app {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn_entrar_appcss {
+  border-radius: 10px;
+  width: 15rem;
+  height: 6rem;
+  padding: 7px;
+  background-color: #a52504;
+  color: #E0FBFC;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn_entrar_appcss:active {
+  background-color: #EE6C4D;
+}
+
+/* btn */
+
+.wh-api {
+  z-index: 99999;
+  Position: fixed;
+  bottom: 20px;
+  right: 40px;
+}
+
+button.wh-ap-btn {
+  outline: none;
+  width: 52px;
+  height: 52px;
+  border: 0;
+  background-color: #25d366;
+  padding: 0;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  cursor: pointer;
+  transition: opacity 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+button.wh-ap-btn::after {
+  content: '';
+  background-image: url(//i.imgur.com/cAS6qqn.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 48%;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+}
+
+button.wh-ap-btn:hover {
+  opacity: 1;
+  background-color: #01E675;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+}
