@@ -31,7 +31,7 @@ export default function Player(props) {
 
 
   function btnPlayPause() {
-    setState({ 
+    setState({
       ...state,
       url: props.link,
       playing: !state.playing
@@ -57,10 +57,11 @@ export default function Player(props) {
         {state.playing ?
 
 
-          <DivCss >
-            <BsFillPauseCircleFill onClick={btnPlayPause} />
-          </DivCss>
-
+          <IconContext.Provider value={{ size: '50px', color: '#531c0e' }}>
+            <DivCss >
+              <BsFillPauseCircleFill onClick={btnPlayPause} />
+            </DivCss>
+          </IconContext.Provider>
           :
           <DivCss >
             <FaPlayCircle onClick={btnPlayPause} />
