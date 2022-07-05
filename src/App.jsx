@@ -8,6 +8,7 @@ import imgdois from './assets/img/banner-namorados-dois.png'
 
 import Home from './Pages/Home'
 import Namorados from './Pages/Namorados/Namorados'
+import Aniversario from './Pages/Aniversario/Aniversario'
 
 import NamMasc from './Pages/Namorados/NamMasc'
 import NamFem from './Pages/Namorados/NamFem'
@@ -15,7 +16,10 @@ import EspMasc from './Pages/Namorados/EspMasc'
 import EspMascEvan from './Pages/Namorados/EspMascEvan'
 import EspFemEvan from './Pages/Namorados/EspFemEvan'
 import EspFem from './Pages/Namorados/EspFem'
+import AnivAmigaFem from './Pages/Aniversario/Amiga/AnivAmigaFem'
+import AnivFilhaFem from './Pages/Aniversario/Filha/AnivFilhaFem'
 
+document.title = 'Telemensagem da Lú'
 
 export default function App() {
   return (
@@ -35,6 +39,9 @@ export default function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/namorados' element={<Namorados />} />
+          <Route path='/aniversario' element={<Aniversario />} />
+          <Route path='/aniversario/amiga/feminino' element={<AnivAmigaFem />} />
+          <Route path='/aniversario/filha/feminino' element={<AnivFilhaFem />} />
           <Route path='/namorados/feminino' element={<NamFem />} />
           <Route path='/namorados/feminino/esposo' element={<EspFem />} />
           <Route path='/namorados/feminino/esposo/evangelico' element={<EspFemEvan />} />

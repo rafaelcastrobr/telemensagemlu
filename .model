@@ -1,0 +1,47 @@
+import styled from "styled-components";
+
+
+//ReplaceWord
+//Player
+
+const ContainerCss = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+`
+
+export default function EspFem() {
+  //https://drive.google.com/file/d/1l2Nbqs1eefWFeiyqqkpiutFn3EcDFpOd/view?usp=sharing
+  return (
+    <div>
+      <h3>###PAGINA###</h3>
+      <ContainerCss>
+        <div>
+          <label>COD: </label>
+          <Player link={ReplaceWord('')} />
+        </div>
+        <div>
+          <label>COD: </label>
+          <Player link={ReplaceWord('')} />
+        </div>
+        <div>
+          <label>COD: </label>
+          <Player link={ReplaceWord('')} />
+        </div>
+        <div>
+          <label>COD:  </label>
+          <Player link={ReplaceWord('')} />
+        </div>
+        <div>
+          <label>COD:  </label>
+          <Player link={ReplaceWord('')} />
+        </div>
+        <div>
+          <label>COD:  </label>
+          <Player link={ReplaceWord('')} />
+        </div>
+      </ContainerCss>
+    </div>
+  )
+}

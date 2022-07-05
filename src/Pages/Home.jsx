@@ -31,6 +31,7 @@ export default function Home() {
         <p>Mensagens sendo enviadas excepcionalmente por Whatsapp.</p>
         <p>Entre em contato!</p>
         <div className="box-btn">
+          <Link to='/aniversario'><button className='btn_entrar_appcss'>ANIVERSÁRIOS</button></Link>
           <Link to='/namorados'><button className='btn_entrar_appcss'>DIA DOS NAMORADOS</button></Link>
           <button className='btn_entrar_appcss desativado'>+ OPÇÕES EM BREVE</button>
         </div>

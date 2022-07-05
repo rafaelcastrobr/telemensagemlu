@@ -5,6 +5,7 @@ import ReplaceWord from "../../function/replace";
 const ContainerCss = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 20px;
 `
 
