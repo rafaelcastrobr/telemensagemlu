@@ -53,12 +53,25 @@ button {
   width: 15rem;
   height: 6rem;
   padding: 7px;
-  background-color: #a52504;
   color: #E0FBFC;
   font-weight: bold;
   font-size: 20px;
   cursor: pointer;
   margin-top: 10px;
+}
+
+.btn-opcao {
+  background-color: #a52504;
+
+}
+
+.fem {
+  background-color: #a52504;
+}
+
+.masc {
+  background-color: #011b70;
+
 }
 
 .btn_entrar_appcss:active {

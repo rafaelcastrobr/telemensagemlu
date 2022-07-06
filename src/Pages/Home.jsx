@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import bolo from '../img/icons8-aniversário-40.png'
+import coracao from '../img/icons8-red-heart-40.png'
 
 const BoxTitle = styled.div`
 display: flex;
@@ -17,6 +19,16 @@ margin-bottom: 20px;
     flex-direction: column;
     align-items: center;
   }
+
+  .box-btn-style {
+    width: 18rem;
+    height: 6rem;
+    margin-bottom: 1em;
+
+    .box-btn-ico {
+      position: absolute;
+    }
+  }
 `
 
 
@@ -31,10 +43,18 @@ export default function Home() {
         <p>Mensagens sendo enviadas excepcionalmente por Whatsapp.</p>
         <p>Entre em contato!</p>
         <div className="box-btn">
-          <Link to='/aniversario'><button className='btn_entrar_appcss'>ANIVERSÁRIOS</button></Link>
-          <Link to='/namorados'><button className='btn_entrar_appcss'>DIA DOS NAMORADOS</button></Link>
+          <div className="box-btn-style">
+            <img className="box-btn-ico" src={bolo} alt="" />
+            <Link to='/aniversario'><button className='btn_entrar_appcss btn-opcao'>ANIVERSÁRIOS</button></Link>
+          </div>
+          <div className="box-btn-style">
+          <img className="box-btn-ico" src={coracao} alt="" />
+
+          <Link to='/namorados'><button className='btn_entrar_appcss btn-opcao'>DIA DOS NAMORADOS</button></Link>
+          </div>
           <button className='btn_entrar_appcss desativado'>+ OPÇÕES EM BREVE</button>
         </div>
+        <p>Encontrou algum erro? Entre em contato!</p>
       </div>
 
     </BoxTitle>
