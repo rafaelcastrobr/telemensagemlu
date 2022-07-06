@@ -23,6 +23,12 @@ import AnivFilhoMasc from './Pages/Aniversario/Filho/AnivFilhoMasc'
 import AnivFilhaMasc from './Pages/Aniversario/Filha/AnivFilhaMasc'
 import AnivMaeMasc from './Pages/Aniversario/Mae/AnivMaeMasc'
 import AnivMaeFem from './Pages/Aniversario/Mae/AnivMaeFem'
+import AnivPaiFem from './Pages/Aniversario/Pai/AnivPaiFem'
+import AnivNamFem from './Pages/Aniversario/Namorado_a/AnivNamFem'
+import AnivEspFem from './Pages/Aniversario/Esposo_a/AnivEspFem'
+import AnivEspMasc from './Pages/Aniversario/Esposo_a/AnivEspMasc'
+import AnivPaiMasc from './Pages/Aniversario/Pai/AnivPaiMasc'
+import AnivNamMasc from './Pages/Aniversario/Namorado_a/AnivNamMasc'
 
 document.title = 'Telemensagem da Lú'
 
@@ -50,10 +56,16 @@ export default function App() {
           <Route path='/aniversario/filha/feminino' element={<AnivFilhaFem />} />
           <Route path='/aniversario/filho/feminino' element={<AnivFilhoFem />} />
           <Route path='/aniversario/mae/feminino' element={<AnivMaeFem />} />
+          <Route path='/aniversario/pai/feminino' element={<AnivPaiFem />} />
+          <Route path='/aniversario/namorado/feminino' element={<AnivNamFem />} />
+          <Route path='/aniversario/esposo/feminino' element={<AnivEspFem />} />
 
           <Route path='/aniversario/filho/masculino' element={<AnivFilhoMasc />} />
           <Route path='/aniversario/filha/masculino' element={<AnivFilhaMasc />} />
           <Route path='/aniversario/mae/masculino' element={<AnivMaeMasc />} />
+          <Route path='/aniversario/esposa/masculino' element={<AnivEspMasc />} />
+          <Route path='/aniversario/pai/masculino' element={<AnivPaiMasc />} />
+          <Route path='/aniversario/namorada/masculino' element={<AnivNamMasc />} />
 
 
           <Route path='/namorados' element={<Namorados />} />

@@ -9,6 +9,9 @@ export default function Aniversario() {
         <Link to='mae/feminino/'><button className='btn_entrar_appcss fem'>FEMININO MÃE</button></Link>
       </div>
       <div>
+        <Link to='pai/feminino/'><button className='btn_entrar_appcss fem'>FEMININO PAI</button></Link>
+      </div>
+      <div>
         <Link to='amiga/feminino/'><button className='btn_entrar_appcss fem'>FEMININO AMIGA</button></Link>
       </div>
       <div>
@@ -18,7 +21,16 @@ export default function Aniversario() {
         <Link to='filho/feminino/'><button className='btn_entrar_appcss fem'>FEMININO FILHO</button></Link>
       </div>
       <div>
+        <Link to='namorado/feminino/'><button className='btn_entrar_appcss fem'>FEMININO NAMORADO</button></Link>
+      </div>
+      <div>
+        <Link to='esposo/feminino/'><button className='btn_entrar_appcss fem'>FEMININO ESPOSO</button></Link>
+      </div>
+      <div>
         <Link to='mae/masculino/'><button className='btn_entrar_appcss masc'>MASCULINO MÃE</button></Link>
+      </div>
+      <div>
+        <Link to='pai/masculino/'><button className='btn_entrar_appcss masc'>MASCULINO PAI</button></Link>
       </div>
       <div>
         <Link to='filho/masculino/'><button className='btn_entrar_appcss masc'>MASCULINO FILHO</button></Link>
@@ -26,9 +38,13 @@ export default function Aniversario() {
       <div>
         <Link to='filha/masculino/'><button className='btn_entrar_appcss masc'>MASCULINO FILHA</button></Link>
       </div>
+      <div>
+        <Link to='namorada/masculino/'><button className='btn_entrar_appcss masc'>MASCULINO NAMORADA</button></Link>
+      </div>
+      <div>
+        <Link to='esposa/masculino/'><button className='btn_entrar_appcss masc'>MASCULINO ESPOSA</button></Link>
+      </div>
 
-
-      
 
     </div>
   )
