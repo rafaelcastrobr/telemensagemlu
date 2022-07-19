@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import bolo from '../img/icons8-aniversário-40.png'
 import coracao from '../img/icons8-red-heart-40.png'
+import flecha from '../img/icons8-love-arrow-40.png'
 
 const BoxTitle = styled.div`
 display: flex;
@@ -47,16 +48,24 @@ export default function Home() {
             <img className="box-btn-ico" src={bolo} alt="" />
             <Link to='/aniversario'><button className='btn_entrar_appcss btn-opcao'>ANIVERSÁRIOS</button></Link>
           </div>
-          <div className="box-btn-style">
-          <img className="box-btn-ico" src={coracao} alt="" />
 
-          <Link to='/namorados'><button className='btn_entrar_appcss btn-opcao'>DIA DOS NAMORADOS</button></Link>
+          <div className="box-btn-style">
+            <img className="box-btn-ico" src={coracao} alt="" />
+            <Link to='/romanticas'><button className='btn_entrar_appcss btn-opcao'>ROMÂNTICAS</button></Link>
           </div>
+
+          <div className="box-btn-style">
+            <img className="box-btn-ico" src={flecha} alt="" />
+            <Link to='/namorados'><button className='btn_entrar_appcss btn-opcao'>DIA DOS NAMORADOS</button></Link>
+          </div>
+
           <button className='btn_entrar_appcss desativado'>+ OPÇÕES EM BREVE</button>
         </div>
         <p>Encontrou algum erro? Entre em contato!</p>
       </div>
-
+      <div style={{display: 'none'}}>
+        ultima 260
+      </div>
     </BoxTitle>
   )
 }
