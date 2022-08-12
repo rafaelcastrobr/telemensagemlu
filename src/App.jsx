@@ -32,6 +32,10 @@ import AnivNamMasc from './Pages/Aniversario/Namorado_a/AnivNamMasc'
 import Romanticas from './Pages/Romantica/Romanticas'
 import RomanticaFem from './Pages/Romantica/Neutra_hot/RomanticaFem'
 import RomanticaMasc from './Pages/Romantica/Neutra_hot/RomanticaMasc'
+import DiaDosPais from './Pages/Pais/Pais'
+import PaisFem from './Pages/Pais/Genero/PaisFem'
+import PaisMasc from './Pages/Pais/Genero/PaisMasc'
+
 
 document.title = 'Telemensagem da Lú'
 
@@ -82,6 +86,10 @@ export default function App() {
           <Route path='/namorados/masculino' element={<NamMasc />} />
           <Route path='/namorados/masculino/esposa' element={<EspMasc />} />
           <Route path='/namorados/masculino/esposa/evangelica' element={<EspMascEvan />} />
+        
+          <Route path='/dia-dos-pais' element={<DiaDosPais />}/>
+          <Route path='/dia-dos-pais/feminino' element={<PaisFem />}/>
+          <Route path='/dia-dos-pais/masculino' element={<PaisMasc />}/>
         </Routes>
       </Router>
 

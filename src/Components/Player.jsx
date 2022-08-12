@@ -12,7 +12,7 @@ import ReactPlayer from 'react-player'
 const DivCss = styled.div`
   display: flex;
   margin-left: 15px;
-
+  cursor: pointer;
 `
 
 const ContainerCss = styled.div`
