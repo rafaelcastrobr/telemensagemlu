@@ -1,6 +1,6 @@
 import './App.css'
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 
 import img from './assets/img/banner-namorados.png'
 import imgdois from './assets/img/banner-namorados-dois.png'
@@ -53,7 +53,7 @@ export default function App() {
         <i class="fa fa-whatsapp my-float"></i>
       </a>
 
-      <Router>
+      <HashRouter basename="/">
         <Routes>
           <Route path='/' element={<Home />} />
 
@@ -91,7 +91,7 @@ export default function App() {
           <Route path='/dia-dos-pais/feminino' element={<PaisFem />}/>
           <Route path='/dia-dos-pais/masculino' element={<PaisMasc />}/>
         </Routes>
-      </Router>
+      </HashRouter>
 
       <div class="wh-api"><a href="https://api.whatsapp.com/send?l=pt_br&amp;phone=+5511930947670&amp;text=Gostaria de saber como funciona"><button class="wh-ap-btn"></button></a></div>
     </div>
