@@ -35,6 +35,7 @@ import RomanticaMasc from './Pages/Romantica/Neutra_hot/RomanticaMasc'
 import DiaDosPais from './Pages/Pais/Pais'
 import PaisFem from './Pages/Pais/Genero/PaisFem'
 import PaisMasc from './Pages/Pais/Genero/PaisMasc'
+import AnivIrmaFem from './Pages/Aniversario/Irma/AnivIrmaFem'
 
 
 document.title = 'Telemensagem da Lú'
@@ -59,11 +60,12 @@ export default function App() {
 
           <Route path='/aniversario' element={<Aniversario />} />
 
+          <Route path='/aniversario/mae/feminino' element={<AnivMaeFem />} />
+          <Route path='/aniversario/pai/feminino' element={<AnivPaiFem />} />
+          <Route path='/aniversario/irma/feminino' element={<AnivIrmaFem />} />
           <Route path='/aniversario/amiga/feminino' element={<AnivAmigaFem />} />
           <Route path='/aniversario/filha/feminino' element={<AnivFilhaFem />} />
           <Route path='/aniversario/filho/feminino' element={<AnivFilhoFem />} />
-          <Route path='/aniversario/mae/feminino' element={<AnivMaeFem />} />
-          <Route path='/aniversario/pai/feminino' element={<AnivPaiFem />} />
           <Route path='/aniversario/namorado/feminino' element={<AnivNamFem />} />
           <Route path='/aniversario/esposo/feminino' element={<AnivEspFem />} />
 

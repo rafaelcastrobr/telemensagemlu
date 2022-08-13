@@ -10,7 +10,7 @@ const ContainerCss = styled.div`
   margin-top: 20px;
 `
 
-export default function PaiFem() {
+export default function PaisFem() {
   return (
     <div>
       <h3>Dia dos País | voz feminina</h3>

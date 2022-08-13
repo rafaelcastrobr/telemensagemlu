@@ -12,6 +12,9 @@ export default function Aniversario() {
         <Link to='pai/feminino/'><button className='btn_entrar_appcss fem'>FEMININO PAI</button></Link>
       </div>
       <div>
+        <Link to='irma/feminino/'><button className='btn_entrar_appcss fem'>FEMININO IRMÃ</button></Link>
+      </div>
+      <div>
         <Link to='amiga/feminino/'><button className='btn_entrar_appcss fem'>FEMININO AMIGA</button></Link>
       </div>
       <div>
