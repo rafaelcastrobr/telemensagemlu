@@ -7,11 +7,11 @@ export default function DiaDosPais() {
       <h1>Clique no gênero</h1>
 
       <div>
-      <Link to='feminino'><button className='btn_entrar_appcss fem'>FEMININO</button></Link>
+        <Link to='feminino'><button className='btn_entrar_appcss fem'>FILHA</button></Link>
       </div>
 
       <div>
-      <Link to='masculino'><button className='btn_entrar_appcss masc'>MASCULINO</button></Link>
+        <Link to='masculino'><button className='btn_entrar_appcss masc'>FILHO</button></Link>
       </div>
     </div>
 
