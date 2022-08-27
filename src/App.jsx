@@ -41,7 +41,7 @@ import AnivIrmaoFem from './Pages/Aniversario/Irmao/AnivIrmaoFem'
 import AnivIrmaoMasc from './Pages/Aniversario/Irmao/AnivIrmaoMasc'
 
 
-document.title = 'Telemensagem da Lú'
+document.title = 'WhatsMensagem da Lú'
 
 export default function App() {
   return (
