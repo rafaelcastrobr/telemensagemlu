@@ -4,6 +4,7 @@ import bolo from '../img/icons8-aniversário-40.png'
 import coracao from '../img/icons8-red-heart-40.png'
 import flecha from '../img/icons8-love-arrow-40.png'
 import pai from '../img/icons8-usuario-masculino-40.png'
+import natal from '../img/icons8-Arvore-de-natal-40.png'
 
 
 const BoxTitle = styled.div`
@@ -13,7 +14,8 @@ align-items: center;
 margin-bottom: 20px;
 
   p {
-    color: blueviolet;
+    //color: blueviolet;
+    color: white;
     font-size: 1.2rem;
   }
 
@@ -47,6 +49,10 @@ export default function Home() {
         <p>Entre em contato!</p>
         <div className="box-btn">
         <div className="box-btn-style">
+            <img className="box-btn-ico" src={natal} alt="" />
+            <Link to='/natal'><button className='btn_entrar_appcss btn-opcao'>NATAL</button></Link>
+          </div>
+        <div className="box-btn-style">
             <img className="box-btn-ico" src={pai} alt="" />
             <Link to='/dia-dos-pais'><button className='btn_entrar_appcss btn-opcao'>DIA DOS PAÍS</button></Link>
           </div>
@@ -70,7 +76,7 @@ export default function Home() {
         <p>Encontrou algum erro? Entre em contato!</p>
       </div>
       <div style={{display: 'none'}}>
-        ultima 260
+        ultima 303
       </div>
     </BoxTitle>
   )

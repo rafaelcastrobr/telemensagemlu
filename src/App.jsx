@@ -39,6 +39,9 @@ import AnivIrmaFem from './Pages/Aniversario/Irma/AnivIrmaFem'
 import AnivIrmaMasc from './Pages/Aniversario/Irma/AnivIrmaMasc'
 import AnivIrmaoFem from './Pages/Aniversario/Irmao/AnivIrmaoFem'
 import AnivIrmaoMasc from './Pages/Aniversario/Irmao/AnivIrmaoMasc'
+import Natal from './Pages/Natal/Natal'
+import NatalNeutroFem from './Pages/Natal/Neutro/NatalNeutroFem'
+import NatalNeutroMasc from './Pages/Natal/Neutro/NatalNeutroMasc'
 
 
 document.title = 'WhatsMensagem da Lú'
@@ -98,6 +101,12 @@ export default function App() {
           <Route path='/dia-dos-pais' element={<DiaDosPais />}/>
           <Route path='/dia-dos-pais/feminino' element={<PaisFem />}/>
           <Route path='/dia-dos-pais/masculino' element={<PaisMasc />}/>
+
+          <Route path='/natal' element={<Natal />}/>
+          <Route path='/natal/neutro/feminino' element={<NatalNeutroFem />}/>
+          <Route path='/natal/neutro/masculino' element={<NatalNeutroMasc />}/>
+
+
         </Routes>
       </HashRouter>
 
