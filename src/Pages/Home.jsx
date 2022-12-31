@@ -14,8 +14,9 @@ align-items: center;
 margin-bottom: 20px;
 
   p {
-    //color: blueviolet;
-    color: white;
+    color: blueviolet;
+/* NATAL */
+    /* color: white; */
     font-size: 1.2rem;
   }
 
@@ -48,14 +49,7 @@ export default function Home() {
         <p>Mensagens sendo enviadas excepcionalmente por Whatsapp.</p>
         <p>Entre em contato!</p>
         <div className="box-btn">
-        <div className="box-btn-style">
-            <img className="box-btn-ico" src={natal} alt="" />
-            <Link to='/natal'><button className='btn_entrar_appcss btn-opcao'>NATAL</button></Link>
-          </div>
-        <div className="box-btn-style">
-            <img className="box-btn-ico" src={pai} alt="" />
-            <Link to='/dia-dos-pais'><button className='btn_entrar_appcss btn-opcao'>DIA DOS PAÍS</button></Link>
-          </div>
+        
           <div className="box-btn-style">
             <img className="box-btn-ico" src={bolo} alt="" />
             <Link to='/aniversario'><button className='btn_entrar_appcss btn-opcao'>ANIVERSÁRIOS</button></Link>
@@ -70,7 +64,15 @@ export default function Home() {
             <img className="box-btn-ico" src={flecha} alt="" />
             <Link to='/namorados'><button className='btn_entrar_appcss btn-opcao'>DIA DOS NAMORADOS</button></Link>
           </div>
-
+          
+        <div className="box-btn-style">
+            <img className="box-btn-ico" src={pai} alt="" />
+            <Link to='/dia-dos-pais'><button className='btn_entrar_appcss btn-opcao'>DIA DOS PAÍS</button></Link>
+          </div>
+          <div className="box-btn-style">
+            <img className="box-btn-ico" src={natal} alt="" />
+            <Link to='/natal'><button className='btn_entrar_appcss btn-opcao'>NATAL</button></Link>
+          </div>
           <button className='btn_entrar_appcss desativado'>+ OPÇÕES EM BREVE</button>
         </div>
         <p>Encontrou algum erro? Entre em contato!</p>
