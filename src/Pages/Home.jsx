@@ -5,6 +5,7 @@ import coracao from '../img/icons8-red-heart-40.png'
 import flecha from '../img/icons8-love-arrow-40.png'
 import pai from '../img/icons8-usuario-masculino-40.png'
 import natal from '../img/icons8-Arvore-de-natal-40.png'
+import maes from '../img/icons8-amamentação-40.png'
 
 
 const BoxTitle = styled.div`
@@ -49,7 +50,10 @@ export default function Home() {
         <p>Mensagens sendo enviadas excepcionalmente por Whatsapp.</p>
         <p>Entre em contato!</p>
         <div className="box-btn">
-        
+        <div className="box-btn-style">
+            <img className="box-btn-ico" src={maes} alt="" />
+            <Link to='/dia-das-maes'><button className='btn_entrar_appcss btn-opcao btn_especial'>DIA DAS MÂES</button></Link>
+          </div>
           <div className="box-btn-style">
             <img className="box-btn-ico" src={bolo} alt="" />
             <Link to='/aniversario'><button className='btn_entrar_appcss btn-opcao'>ANIVERSÁRIOS</button></Link>
@@ -65,10 +69,11 @@ export default function Home() {
             <Link to='/namorados'><button className='btn_entrar_appcss btn-opcao'>DIA DOS NAMORADOS</button></Link>
           </div>
           
-        <div className="box-btn-style">
+          <div className="box-btn-style">
             <img className="box-btn-ico" src={pai} alt="" />
             <Link to='/dia-dos-pais'><button className='btn_entrar_appcss btn-opcao'>DIA DOS PAÍS</button></Link>
           </div>
+          
           <div className="box-btn-style">
             <img className="box-btn-ico" src={natal} alt="" />
             <Link to='/natal'><button className='btn_entrar_appcss btn-opcao'>NATAL</button></Link>

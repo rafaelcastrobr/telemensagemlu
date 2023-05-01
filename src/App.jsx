@@ -42,6 +42,9 @@ import AnivIrmaoMasc from './Pages/Aniversario/Irmao/AnivIrmaoMasc'
 import Natal from './Pages/Natal/Natal'
 import NatalNeutroFem from './Pages/Natal/Neutro/NatalNeutroFem'
 import NatalNeutroMasc from './Pages/Natal/Neutro/NatalNeutroMasc'
+import MaesFem from './Pages/Maes/Genero/MaesFem'
+import DiaDasMaes from './Pages/Maes/Maes'
+import MaesMasc from './Pages/Maes/Genero/MaesMasc'
 
 
 document.title = 'WhatsMensagem da Lú'
@@ -56,9 +59,6 @@ export default function App() {
         <img className='img-app' src={img} />
       </div>
 
-      <a href="https://api.whatsapp.com/send?phone=554899999999&text=Olá!%20Encontrei%20seu%20site%20na%20Internet%20e%20preciso%20de%20seus%20serviços." class="float" target="_blank">
-        <i class="fa fa-whatsapp my-float"></i>
-      </a>
 
       <HashRouter basename="/">
         <Routes>
@@ -102,6 +102,10 @@ export default function App() {
           <Route path='/dia-dos-pais/feminino' element={<PaisFem />}/>
           <Route path='/dia-dos-pais/masculino' element={<PaisMasc />}/>
 
+          <Route path='/dia-das-maes' element={<DiaDasMaes />}/>
+          <Route path='/dia-das-maes/neutro/feminino' element={<MaesFem />}/>
+          <Route path='/dia-das-maes/neutro/masculino' element={<MaesMasc />}/>
+
           <Route path='/natal' element={<Natal />}/>
           <Route path='/natal/neutro/feminino' element={<NatalNeutroFem />}/>
           <Route path='/natal/neutro/masculino' element={<NatalNeutroMasc />}/>
@@ -110,7 +114,8 @@ export default function App() {
         </Routes>
       </HashRouter>
 
-      <div class="wh-api"><a href="https://api.whatsapp.com/send?l=pt_br&amp;phone=+5511930947670&amp;text=Gostaria de saber como funciona"><button class="wh-ap-btn"></button></a></div>
+      {/* <div class="wh-api"><a href="https://api.whatsapp.com/send?l=pt_br&amp;phone=+5511930947670&amp;text=Gostaria de saber como funciona"><button class="wh-ap-btn"></button></a></div> */}
+    
     </div>
   )
 }
