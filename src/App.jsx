@@ -1,6 +1,6 @@
 import './App.css'
 
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Link, Route, Routes } from 'react-router-dom'
 
 import img from './assets/img/banner-namorados.png'
 import imgdois from './assets/img/banner-namorados-dois.png'
@@ -53,15 +53,16 @@ document.title = 'WhatsMensagem da Lú'
 export default function App() {
   return (
     <div className="App">
-      <div className='img-dois'>
-        <img className='img-app' src={imgdois} />
-      </div>
-      <div className='img-um' >
-        <img className='img-app' src={img} />
-      </div>
+      
 
 
       <HashRouter basename="/">
+      <div className='img-dois'>
+        <Link to="/"><img className='img-app' src={imgdois} /></Link>
+      </div>
+      <div className='img-um' >
+        <Link to="/"><img className='img-app' src={img} /></Link>
+      </div>
         <Routes>
           <Route path='/' element={<Home />} />
 
