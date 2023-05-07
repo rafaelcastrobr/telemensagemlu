@@ -33,6 +33,10 @@ export default function Aniversario() {
         <Link to='esposo/feminino/'><button className='btn_entrar_appcss fem'>FEMININO ESPOSO</button></Link>
       </div>
       <div>
+        <Link to='tio/feminino/'><button className='btn_entrar_appcss fem'>FEMININO TIO</button></Link>
+      </div>
+
+      <div>
         <Link to='mae/masculino/'><button className='btn_entrar_appcss masc'>MASCULINO MÃE</button></Link>
       </div>
       <div>

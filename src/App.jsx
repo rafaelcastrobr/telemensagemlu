@@ -45,6 +45,7 @@ import NatalNeutroMasc from './Pages/Natal/Neutro/NatalNeutroMasc'
 import MaesFem from './Pages/Maes/Genero/MaesFem'
 import DiaDasMaes from './Pages/Maes/Maes'
 import MaesMasc from './Pages/Maes/Genero/MaesMasc'
+import AnivTioFem from './Pages/Aniversario/Tio/AnivTioFem'
 
 
 document.title = 'WhatsMensagem da Lú'
@@ -75,6 +76,7 @@ export default function App() {
           <Route path='/aniversario/filho/feminino' element={<AnivFilhoFem />} />
           <Route path='/aniversario/namorado/feminino' element={<AnivNamFem />} />
           <Route path='/aniversario/esposo/feminino' element={<AnivEspFem />} />
+          <Route path='/aniversario/tio/feminino' element={<AnivTioFem />} />
 
           <Route path='/aniversario/filho/masculino' element={<AnivFilhoMasc />} />
           <Route path='/aniversario/filha/masculino' element={<AnivFilhaMasc />} />

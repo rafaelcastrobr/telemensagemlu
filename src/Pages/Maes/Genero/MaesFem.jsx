@@ -17,7 +17,7 @@ export default function MaesFem() {
   //https://drive.google.com/file/d/1l2Nbqs1eefWFeiyqqkpiutFn3EcDFpOd/view?usp=sharing
   return (
     <div>
-      <h3>Dia dos País | voz feminina</h3>
+      <h3>Dia das Mães | voz feminina</h3>
       <ContainerCss>
         <div>
           <label>COD: 315</label>
