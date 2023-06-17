@@ -46,6 +46,8 @@ import MaesFem from './Pages/Maes/Genero/MaesFem'
 import DiaDasMaes from './Pages/Maes/Maes'
 import MaesMasc from './Pages/Maes/Genero/MaesMasc'
 import AnivTioFem from './Pages/Aniversario/Tio/AnivTioFem'
+import AnivNetaFem from './Pages/Aniversario/Netos/Neta/AnivNetaFem'
+import AnivNetaMasc from './Pages/Aniversario/Netos/Neta/AnivNetaMasc'
 
 
 document.title = 'WhatsMensagem da Lú'
@@ -78,6 +80,7 @@ export default function App() {
           <Route path='/aniversario/namorado/feminino' element={<AnivNamFem />} />
           <Route path='/aniversario/esposo/feminino' element={<AnivEspFem />} />
           <Route path='/aniversario/tio/feminino' element={<AnivTioFem />} />
+          <Route path='/aniversario/neta/feminino' element={<AnivNetaFem/>} />
 
           <Route path='/aniversario/filho/masculino' element={<AnivFilhoMasc />} />
           <Route path='/aniversario/filha/masculino' element={<AnivFilhaMasc />} />
@@ -87,7 +90,8 @@ export default function App() {
           <Route path='/aniversario/esposa/masculino' element={<AnivEspMasc />} />
           <Route path='/aniversario/pai/masculino' element={<AnivPaiMasc />} />
           <Route path='/aniversario/namorada/masculino' element={<AnivNamMasc />} />
-
+          <Route path='/aniversario/neta/masculino' element={<AnivNetaMasc/>} />
+ 
           <Route path='/romanticas' element={<Romanticas />} />
           <Route path='/romanticas/feminino' element={<RomanticaFem />} />
           <Route path='/romanticas/masculino' element={<RomanticaMasc />} />

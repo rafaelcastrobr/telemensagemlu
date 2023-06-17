@@ -50,10 +50,8 @@ export default function Home() {
         <p>Mensagens sendo enviadas excepcionalmente por Whatsapp.</p>
         <p>Entre em contato!</p>
         <div className="box-btn">
-        <div className="box-btn-style">
-            <img className="box-btn-ico" src={maes} alt="" />
-            <Link to='/dia-das-maes'><button className='btn_entrar_appcss btn-opcao btn_especial'>DIA DAS MÂES</button></Link>
-          </div>
+        
+
           <div className="box-btn-style">
             <img className="box-btn-ico" src={bolo} alt="" />
             <Link to='/aniversario'><button className='btn_entrar_appcss btn-opcao'>ANIVERSÁRIOS</button></Link>
@@ -68,7 +66,12 @@ export default function Home() {
             <img className="box-btn-ico" src={flecha} alt="" />
             <Link to='/namorados'><button className='btn_entrar_appcss btn-opcao'>DIA DOS NAMORADOS</button></Link>
           </div>
-          
+
+          <div className="box-btn-style">
+            <img className="box-btn-ico" src={maes} alt="" />
+            <Link to='/dia-das-maes'><button className='btn_entrar_appcss btn-opcao'>DIA DAS MÂES</button></Link>
+          </div>
+
           <div className="box-btn-style">
             <img className="box-btn-ico" src={pai} alt="" />
             <Link to='/dia-dos-pais'><button className='btn_entrar_appcss btn-opcao'>DIA DOS PAÍS</button></Link>
@@ -83,7 +86,7 @@ export default function Home() {
         <p>Encontrou algum erro? Entre em contato!</p>
       </div>
       <div style={{display: 'none'}}>
-        ultima 303
+        ultima 341 última adc netos masc
       </div>
     </BoxTitle>
   )
