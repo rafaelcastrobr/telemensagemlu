@@ -48,6 +48,9 @@ import MaesMasc from './Pages/Maes/Genero/MaesMasc'
 import AnivTioFem from './Pages/Aniversario/Tio/AnivTioFem'
 import AnivNetaFem from './Pages/Aniversario/Netos/Neta/AnivNetaFem'
 import AnivNetaMasc from './Pages/Aniversario/Netos/Neta/AnivNetaMasc'
+import Agradecimento from './Pages/Agradecimento/Agradecimento'
+import AgradecimentoFem from './Pages/Agradecimento/AgradecimentoFem'
+import AgradecimentoMasc from './Pages/Agradecimento/AgradecimentoMasc'
 
 
 document.title = 'WhatsMensagem da Lú'
@@ -116,6 +119,11 @@ export default function App() {
           <Route path='/natal' element={<Natal />}/>
           <Route path='/natal/neutro/feminino' element={<NatalNeutroFem />}/>
           <Route path='/natal/neutro/masculino' element={<NatalNeutroMasc />}/>
+
+
+          <Route path='/agradecimento' element={<Agradecimento />}/>
+          <Route path='/agradecimento/feminino' element={<AgradecimentoFem />} />
+          <Route path='/agradecimento/masculino' element={<AgradecimentoMasc/>} />
 
 
         </Routes>
