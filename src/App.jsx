@@ -52,6 +52,7 @@ import Agradecimento from './Pages/Agradecimento/Agradecimento'
 import AgradecimentoFem from './Pages/Agradecimento/AgradecimentoFem'
 import AgradecimentoMasc from './Pages/Agradecimento/AgradecimentoMasc'
 import PaisEspFem from './Pages/Pais/Esposa/PaisEspFem'
+import PaisHomenagemFem from './Pages/Pais/Homenagem/PaisHomenagemFem'
 
 
 document.title = 'WhatsMensagem da Lú'
@@ -113,6 +114,7 @@ export default function App() {
           <Route path='/dia-dos-pais/filhos/feminino' element={<PaisFem />}/>
           <Route path='/dia-dos-pais/filhos/masculino' element={<PaisMasc />}/>
           <Route path='/dia-dos-pais/esposa' element={<PaisEspFem />}/>
+          <Route path='/dia-dos-pais/homenagem' element={<PaisHomenagemFem />}/>
 
           <Route path='/dia-das-maes' element={<DiaDasMaes />}/>
           <Route path='/dia-das-maes/neutro/feminino' element={<MaesFem />}/>

@@ -17,7 +17,9 @@ export default function DiaDosPais() {
         <Link to='filhos/masculino'><button className='btn_entrar_appcss masc'>FILHO</button></Link>
       </div>
 
-      
+      <div>
+        <Link to='homenagem'><button className='btn_entrar_appcss fem'>HOMENAGEM FEM</button></Link>
+      </div>
 
     </div>
 
