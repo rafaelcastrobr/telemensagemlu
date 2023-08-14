@@ -33,8 +33,8 @@ import Romanticas from './Pages/Romantica/Romanticas'
 import RomanticaFem from './Pages/Romantica/Neutra_hot/RomanticaFem'
 import RomanticaMasc from './Pages/Romantica/Neutra_hot/RomanticaMasc'
 import DiaDosPais from './Pages/Pais/Pais'
-import PaisFem from './Pages/Pais/Genero/PaisFem'
-import PaisMasc from './Pages/Pais/Genero/PaisMasc'
+import PaisFem from './Pages/Pais/Filhos/PaisFem'
+import PaisMasc from './Pages/Pais/Filhos/PaisMasc'
 import AnivIrmaFem from './Pages/Aniversario/Irma/AnivIrmaFem'
 import AnivIrmaMasc from './Pages/Aniversario/Irma/AnivIrmaMasc'
 import AnivIrmaoFem from './Pages/Aniversario/Irmao/AnivIrmaoFem'
@@ -51,6 +51,8 @@ import AnivNetaMasc from './Pages/Aniversario/Netos/Neta/AnivNetaMasc'
 import Agradecimento from './Pages/Agradecimento/Agradecimento'
 import AgradecimentoFem from './Pages/Agradecimento/AgradecimentoFem'
 import AgradecimentoMasc from './Pages/Agradecimento/AgradecimentoMasc'
+import PaisEspFem from './Pages/Pais/Esposa/PaisEspFem'
+import PaisHomenagemFem from './Pages/Pais/Homenagem/PaisHomenagemFem'
 
 
 document.title = 'WhatsMensagem da Lú'
@@ -109,8 +111,10 @@ export default function App() {
           <Route path='/namorados/masculino/esposa/evangelica' element={<EspMascEvan />} />
         
           <Route path='/dia-dos-pais' element={<DiaDosPais />}/>
-          <Route path='/dia-dos-pais/feminino' element={<PaisFem />}/>
-          <Route path='/dia-dos-pais/masculino' element={<PaisMasc />}/>
+          <Route path='/dia-dos-pais/filhos/feminino' element={<PaisFem />}/>
+          <Route path='/dia-dos-pais/filhos/masculino' element={<PaisMasc />}/>
+          <Route path='/dia-dos-pais/esposa' element={<PaisEspFem />}/>
+          <Route path='/dia-dos-pais/homenagem' element={<PaisHomenagemFem />}/>
 
           <Route path='/dia-das-maes' element={<DiaDasMaes />}/>
           <Route path='/dia-das-maes/neutro/feminino' element={<MaesFem />}/>
