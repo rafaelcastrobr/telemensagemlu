@@ -51,11 +51,7 @@ export default function Home() {
         <p>Mensagens sendo enviadas excepcionalmente por Whatsapp.</p>
         <p>Entre em contato!</p>
         <div className="box-btn">
-        <div className="box-btn-style">
-            <img className="box-btn-ico" src={pai} alt="" />
-            <Link to='/dia-dos-pais'><button className='btn_entrar_appcss btn-opcao btn_especial'>DIA DOS PAÍS</button></Link>
-          </div>
-
+        
           <div className="box-btn-style">
             <img className="box-btn-ico" src={bolo} alt="" />
             <Link to='/aniversario'><button className='btn_entrar_appcss btn-opcao'>ANIVERSÁRIOS</button></Link>
@@ -76,7 +72,11 @@ export default function Home() {
             <Link to='/dia-das-maes'><button className='btn_entrar_appcss btn-opcao'>DIA DAS MÂES</button></Link>
           </div>
 
-        
+          <div className="box-btn-style">
+            <img className="box-btn-ico" src={pai} alt="" />
+            <Link to='/dia-dos-pais'><button className='btn_entrar_appcss btn-opcao'>DIA DOS PAÍS</button></Link>
+          </div>
+
           
           <div className="box-btn-style">
             <img className="box-btn-ico" src={natal} alt="" />
