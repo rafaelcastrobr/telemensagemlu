@@ -5,7 +5,7 @@ import { HashRouter, Link, Route, Routes } from 'react-router-dom'
 import img from './assets/img/banner-namorados.png'
 import imgdois from './assets/img/banner-namorados-dois.png'
 
-
+ 
 import Home from './Pages/Home'
 import Namorados from './Pages/Namorados/Namorados'
 import Aniversario from './Pages/Aniversario/Aniversario'
