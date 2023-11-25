@@ -7,6 +7,7 @@ const ContainerCss = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+  height: 100%;
 `
 
 export default function AnivAmigaFem() {

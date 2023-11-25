@@ -1,6 +1,6 @@
 import './App.css'
 
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Link, Route, Routes } from 'react-router-dom'
 
 import img from './assets/img/banner-namorados.png'
 import imgdois from './assets/img/banner-namorados-dois.png'
@@ -33,12 +33,26 @@ import Romanticas from './Pages/Romantica/Romanticas'
 import RomanticaFem from './Pages/Romantica/Neutra_hot/RomanticaFem'
 import RomanticaMasc from './Pages/Romantica/Neutra_hot/RomanticaMasc'
 import DiaDosPais from './Pages/Pais/Pais'
-import PaisFem from './Pages/Pais/Genero/PaisFem'
-import PaisMasc from './Pages/Pais/Genero/PaisMasc'
+import PaisFem from './Pages/Pais/Filhos/PaisFem'
+import PaisMasc from './Pages/Pais/Filhos/PaisMasc'
 import AnivIrmaFem from './Pages/Aniversario/Irma/AnivIrmaFem'
 import AnivIrmaMasc from './Pages/Aniversario/Irma/AnivIrmaMasc'
 import AnivIrmaoFem from './Pages/Aniversario/Irmao/AnivIrmaoFem'
 import AnivIrmaoMasc from './Pages/Aniversario/Irmao/AnivIrmaoMasc'
+import Natal from './Pages/Natal/Natal'
+import NatalNeutroFem from './Pages/Natal/Neutro/NatalNeutroFem'
+import NatalNeutroMasc from './Pages/Natal/Neutro/NatalNeutroMasc'
+import MaesFem from './Pages/Maes/Genero/MaesFem'
+import DiaDasMaes from './Pages/Maes/Maes'
+import MaesMasc from './Pages/Maes/Genero/MaesMasc'
+import AnivTioFem from './Pages/Aniversario/Tio/AnivTioFem'
+import AnivNetaFem from './Pages/Aniversario/Netos/Neta/AnivNetaFem'
+import AnivNetaMasc from './Pages/Aniversario/Netos/Neta/AnivNetaMasc'
+import Agradecimento from './Pages/Agradecimento/Agradecimento'
+import AgradecimentoFem from './Pages/Agradecimento/AgradecimentoFem'
+import AgradecimentoMasc from './Pages/Agradecimento/AgradecimentoMasc'
+import PaisEspFem from './Pages/Pais/Esposa/PaisEspFem'
+import PaisHomenagemFem from './Pages/Pais/Homenagem/PaisHomenagemFem'
 
 
 document.title = 'WhatsMensagem da Lú'
@@ -46,18 +60,16 @@ document.title = 'WhatsMensagem da Lú'
 export default function App() {
   return (
     <div className="App">
-      <div className='img-dois'>
-        <img className='img-app' src={imgdois} />
-      </div>
-      <div className='img-um' >
-        <img className='img-app' src={img} />
-      </div>
+      
 
-      <a href="https://api.whatsapp.com/send?phone=554899999999&text=Olá!%20Encontrei%20seu%20site%20na%20Internet%20e%20preciso%20de%20seus%20serviços." class="float" target="_blank">
-        <i class="fa fa-whatsapp my-float"></i>
-      </a>
 
       <HashRouter basename="/">
+      <div className='img-dois'>
+        <Link to="/"><img className='img-app' src={imgdois} /></Link>
+      </div>
+      <div className='img-um' >
+        <Link to="/"><img className='img-app' src={img} /></Link>
+      </div>
         <Routes>
           <Route path='/' element={<Home />} />
 
@@ -72,6 +84,8 @@ export default function App() {
           <Route path='/aniversario/filho/feminino' element={<AnivFilhoFem />} />
           <Route path='/aniversario/namorado/feminino' element={<AnivNamFem />} />
           <Route path='/aniversario/esposo/feminino' element={<AnivEspFem />} />
+          <Route path='/aniversario/tio/feminino' element={<AnivTioFem />} />
+          <Route path='/aniversario/neta/feminino' element={<AnivNetaFem/>} />
 
           <Route path='/aniversario/filho/masculino' element={<AnivFilhoMasc />} />
           <Route path='/aniversario/filha/masculino' element={<AnivFilhaMasc />} />
@@ -81,7 +95,8 @@ export default function App() {
           <Route path='/aniversario/esposa/masculino' element={<AnivEspMasc />} />
           <Route path='/aniversario/pai/masculino' element={<AnivPaiMasc />} />
           <Route path='/aniversario/namorada/masculino' element={<AnivNamMasc />} />
-
+          <Route path='/aniversario/neta/masculino' element={<AnivNetaMasc/>} />
+ 
           <Route path='/romanticas' element={<Romanticas />} />
           <Route path='/romanticas/feminino' element={<RomanticaFem />} />
           <Route path='/romanticas/masculino' element={<RomanticaMasc />} />
@@ -96,12 +111,30 @@ export default function App() {
           <Route path='/namorados/masculino/esposa/evangelica' element={<EspMascEvan />} />
         
           <Route path='/dia-dos-pais' element={<DiaDosPais />}/>
-          <Route path='/dia-dos-pais/feminino' element={<PaisFem />}/>
-          <Route path='/dia-dos-pais/masculino' element={<PaisMasc />}/>
+          <Route path='/dia-dos-pais/filhos/feminino' element={<PaisFem />}/>
+          <Route path='/dia-dos-pais/filhos/masculino' element={<PaisMasc />}/>
+          <Route path='/dia-dos-pais/esposa' element={<PaisEspFem />}/>
+          <Route path='/dia-dos-pais/homenagem' element={<PaisHomenagemFem />}/>
+
+          <Route path='/dia-das-maes' element={<DiaDasMaes />}/>
+          <Route path='/dia-das-maes/neutro/feminino' element={<MaesFem />}/>
+          <Route path='/dia-das-maes/neutro/masculino' element={<MaesMasc />}/>
+
+          <Route path='/natal' element={<Natal />}/>
+          <Route path='/natal/neutro/feminino' element={<NatalNeutroFem />}/>
+          <Route path='/natal/neutro/masculino' element={<NatalNeutroMasc />}/>
+
+
+          <Route path='/agradecimento' element={<Agradecimento />}/>
+          <Route path='/agradecimento/feminino' element={<AgradecimentoFem />} />
+          <Route path='/agradecimento/masculino' element={<AgradecimentoMasc/>} />
+
+
         </Routes>
       </HashRouter>
 
-      <div class="wh-api"><a href="https://api.whatsapp.com/send?l=pt_br&amp;phone=+5511930947670&amp;text=Gostaria de saber como funciona"><button class="wh-ap-btn"></button></a></div>
+      {/* <div class="wh-api"><a href="https://api.whatsapp.com/send?l=pt_br&amp;phone=+5511930947670&amp;text=Gostaria de saber como funciona"><button class="wh-ap-btn"></button></a></div> */}
+    
     </div>
   )
 }

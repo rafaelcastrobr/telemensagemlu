@@ -53,7 +53,10 @@ export default function Player(props) {
     <IconContext.Provider value={{ size: '50px', color: '#EE6C4D' }}>
       <ContainerCss>
         <ReactPlayer url={state.url} playing={state.playing} width='0px' height='0px' />
+        <DivCss>
+
         <BsFillStopCircleFill onClick={btnStop} />
+        </DivCss>
 
         {state.playing ?
 
