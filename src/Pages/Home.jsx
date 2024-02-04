@@ -59,7 +59,7 @@ export default function Home() {
 
           <div className="box-btn-style">
             <img className="box-btn-ico" src={coracao} alt="" />
-            <Link to='/romanticas'><button className='btn_entrar_appcss btn-opcao'>ROMÂNTICAS</button></Link>
+            <Link to='/romanticas-inicial'><button className='btn_entrar_appcss btn-opcao'>ROMÂNTICAS</button></Link>
           </div>
 
           <div className="box-btn-style">
@@ -93,7 +93,7 @@ export default function Home() {
         <p>Encontrou algum erro? Entre em contato!</p>
       </div>
       <div style={{display: 'none'}}>
-        ultima 354 última adc pais/esposa
+        ultima 358 última adc desculparomantica
       </div>
     </BoxTitle>
   )

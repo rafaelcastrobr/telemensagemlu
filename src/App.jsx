@@ -5,7 +5,7 @@ import { HashRouter, Link, Route, Routes } from 'react-router-dom'
 import img from './assets/img/banner-namorados.png'
 import imgdois from './assets/img/banner-namorados-dois.png'
 
-
+ 
 import Home from './Pages/Home'
 import Namorados from './Pages/Namorados/Namorados'
 import Aniversario from './Pages/Aniversario/Aniversario'
@@ -29,7 +29,6 @@ import AnivEspFem from './Pages/Aniversario/Esposo_a/AnivEspFem'
 import AnivEspMasc from './Pages/Aniversario/Esposo_a/AnivEspMasc'
 import AnivPaiMasc from './Pages/Aniversario/Pai/AnivPaiMasc'
 import AnivNamMasc from './Pages/Aniversario/Namorado_a/AnivNamMasc'
-import Romanticas from './Pages/Romantica/Romanticas'
 import RomanticaFem from './Pages/Romantica/Neutra_hot/RomanticaFem'
 import RomanticaMasc from './Pages/Romantica/Neutra_hot/RomanticaMasc'
 import DiaDosPais from './Pages/Pais/Pais'
@@ -53,6 +52,10 @@ import AgradecimentoFem from './Pages/Agradecimento/AgradecimentoFem'
 import AgradecimentoMasc from './Pages/Agradecimento/AgradecimentoMasc'
 import PaisEspFem from './Pages/Pais/Esposa/PaisEspFem'
 import PaisHomenagemFem from './Pages/Pais/Homenagem/PaisHomenagemFem'
+import Romanticas from './Pages/Romantica/Neutra_hot/Romanticas'
+import RomanticasInicial from './Pages/Romantica/RomanticaInicial'
+import DesculpasRomanticaFem from './Pages/Romantica/Desculpas/DesculpasRomanticaFem'
+import DesculpasRomanticas from './Pages/Romantica/Desculpas/DesculpasRomanticas'
 
 
 document.title = 'WhatsMensagem da Lú'
@@ -97,6 +100,11 @@ export default function App() {
           <Route path='/aniversario/namorada/masculino' element={<AnivNamMasc />} />
           <Route path='/aniversario/neta/masculino' element={<AnivNetaMasc/>} />
  
+          <Route path='/romanticas-inicial' element={<RomanticasInicial />} />
+
+          <Route path='/desculpas' element={<DesculpasRomanticas />} />
+          <Route path='/desculpas/feminino' element={<DesculpasRomanticaFem />} />
+
           <Route path='/romanticas' element={<Romanticas />} />
           <Route path='/romanticas/feminino' element={<RomanticaFem />} />
           <Route path='/romanticas/masculino' element={<RomanticaMasc />} />
