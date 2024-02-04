@@ -38,31 +38,17 @@ margin-bottom: 20px;
     }
   }
 `
-
-
-export default function Home() {
-
-  return (
-
-    <BoxTitle>
-
-      <div>
-        <h1>Mensagens Para Todas Ocasiões</h1>
-        <p>Mensagens sendo enviadas excepcionalmente por Whatsapp.</p>
-        <p>Entre em contato!</p>
-        <div className="box-btn">
-        
-          <div className="box-btn-style">
+/*<div className="box-btn-style">
             <img className="box-btn-ico" src={bolo} alt="" />
             <Link to='/aniversario'><button className='btn_entrar_appcss btn-opcao'>ANIVERSÁRIOS</button></Link>
           </div>
 
-          <div className="box-btn-style">
-            <img className="box-btn-ico" src={coracao} alt="" />
-            <Link to='/romanticas-inicial'><button className='btn_entrar_appcss btn-opcao'>ROMÂNTICAS</button></Link>
-          </div>
-
-          <div className="box-btn-style">
+          
+          ESPOSO
+          
+          
+          
+           <div className="box-btn-style">
             <img className="box-btn-ico" src={flecha} alt="" />
             <Link to='/namorados'><button className='btn_entrar_appcss btn-opcao'>DIA DOS NAMORADOS</button></Link>
           </div>
@@ -77,7 +63,7 @@ export default function Home() {
             <Link to='/dia-dos-pais'><button className='btn_entrar_appcss btn-opcao'>DIA DOS PAÍS</button></Link>
           </div>
 
-          
+
           <div className="box-btn-style">
             <img className="box-btn-ico" src={natal} alt="" />
             <Link to='/natal'><button className='btn_entrar_appcss btn-opcao'>NATAL</button></Link>
@@ -86,13 +72,38 @@ export default function Home() {
           <div className="box-btn-style">
             <img className="box-btn-ico" src={agradecimento} alt="" />
             <Link to='/agradecimento'><button className='btn_entrar_appcss btn-opcao'>AGRADECIMENTOS</button></Link>
-          
+
           </div>
-          <button className='btn_entrar_appcss desativado'>+ OPÇÕES EM BREVE</button>
+          
+          */
+
+export default function Home() {
+
+  return (
+
+    <BoxTitle>
+
+      <div>
+        <h1>Mensagens Para Todas Ocasiões</h1>
+        <p>Mensagens sendo enviadas excepcionalmente por Whatsapp.</p>
+        <p>Entre em contato!</p>
+        <div className="box-btn">
+
+
+
+
+
+          <div className="box-btn-style">
+            <img className="box-btn-ico" src={coracao} alt="" />
+            <Link to='/romanticas-inicial'><button className='btn_entrar_appcss btn-opcao'>ROMÂNTICAS</button></Link>
+          </div>
+
+         
+          <button className='btn_entrar_appcss desativado'> SITE EM REFORMA </button>
         </div>
         <p>Encontrou algum erro? Entre em contato!</p>
       </div>
-      <div style={{display: 'none'}}>
+      <div style={{ display: 'none' }}>
         ultima 358 última adc desculparomantica
       </div>
     </BoxTitle>
