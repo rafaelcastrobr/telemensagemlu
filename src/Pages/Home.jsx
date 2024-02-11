@@ -98,7 +98,11 @@ export default function Home() {
             <Link to='/romanticas-inicial'><button className='btn_entrar_appcss btn-opcao'>ROMÂNTICAS</button></Link>
           </div>
 
-         
+          <div className="box-btn-style">
+            <img className="box-btn-ico" src={agradecimento} alt="" />
+            <Link to='/agradecimento'><button className='btn_entrar_appcss btn-opcao'>AGRADECIMENTOS</button></Link>
+
+          </div>
           <button className='btn_entrar_appcss desativado'> SITE EM REFORMA </button>
         </div>
         <p>Encontrou algum erro? Entre em contato!</p>

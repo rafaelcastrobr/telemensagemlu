@@ -2,8 +2,8 @@ import './App.css'
 
 import { HashRouter, Link, Route, Routes } from 'react-router-dom'
 
-import img from './assets/img/banner-namorados.png'
-import imgdois from './assets/img/banner-namorados-dois.png'
+import img from './assets/img/banner-namorados-lu.png'
+import imgdois from './assets/img/banner-namorados-dois-lu.png'
 
  
 import Home from './Pages/Home'
