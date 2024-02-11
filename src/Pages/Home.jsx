@@ -66,11 +66,7 @@ margin-bottom: 20px;
             <Link to='/natal'><button className='btn_entrar_appcss btn-opcao'>NATAL</button></Link>
           </div>
 
-          <div className="box-btn-style">
-            <img className="box-btn-ico" src={agradecimento} alt="" />
-            <Link to='/agradecimento'><button className='btn_entrar_appcss btn-opcao'>AGRADECIMENTOS</button></Link>
-
-          </div>
+       
           
           */
 
