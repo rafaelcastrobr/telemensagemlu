@@ -38,10 +38,7 @@ margin-bottom: 20px;
     }
   }
 `
-/*<div className="box-btn-style">
-            <img className="box-btn-ico" src={bolo} alt="" />
-            <Link to='/aniversario'><button className='btn_entrar_appcss btn-opcao'>ANIVERSÁRIOS</button></Link>
-          </div>
+/*
 
           
           ESPOSO
@@ -91,7 +88,10 @@ export default function Home() {
 
 
 
-
+        <div className="box-btn-style">
+            <img className="box-btn-ico" src={bolo} alt="" />
+            <Link to='/aniversario'><button className='btn_entrar_appcss btn-opcao'>ANIVERSÁRIOS</button></Link>
+          </div>
 
           <div className="box-btn-style">
             <img className="box-btn-ico" src={coracao} alt="" />
