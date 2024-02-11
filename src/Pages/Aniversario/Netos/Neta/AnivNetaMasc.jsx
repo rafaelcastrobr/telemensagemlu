@@ -20,19 +20,19 @@ export default function AnivNetaMasc() {
       <ContainerCss>
         <div>
           <label>COD: 338</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1426ngayg-EmwNLria5xOPxvbbwRDNL7n/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Netos/Neta/M/338.mp3'} />
         </div>
         <div>
           <label>COD: 339</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1lLxPRNKQM8nFYCUIa2XXqZH-CimbQVWm/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Netos/Neta/M/339.mp3'} />
         </div>
         <div>
           <label>COD: 340</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1jRjENz4rHQ7RhssRo1CveLH1R3DvjBY9/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Netos/Neta/M/340.mp3'} />
         </div>
         <div>
           <label>COD: 341</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1f4799bisAbciQ_qLaR1ffDTOhmszMXb3/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Netos/Neta/M/341.mp3'} />
         </div>
         
       </ContainerCss>

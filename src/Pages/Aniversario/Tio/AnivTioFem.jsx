@@ -21,15 +21,15 @@ export default function AnivTioFem() {
       <ContainerCss>
         <div>
           <label>COD: 334</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1I5VjFoC8jemwH0jsUorYyNnbSts0bfwj/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/TIO/Fem/334.mp3'} />
         </div>
         <div>
           <label>COD: 335</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1x8NgD4MPxkk7GU8gjPxaPlIj86zecc2R/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/TIO/Fem/335.mp3'} />
         </div>
         <div>
           <label>COD: 336</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1-yTO58NrG_j-U8Nsto4Wv6x2JL2U0kT2/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/TIO/Fem/336.mp3'} />
         </div>
       </ContainerCss>
     </div>

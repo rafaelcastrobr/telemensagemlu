@@ -16,27 +16,27 @@ export default function AnivIrmaFem() {
       <ContainerCss>
         <div>
           <label>COD: 279</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1bgK2RYQ_ipXRfPZ3HwY8iwxkqagttOBt/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Irma/Fem/279.mp3'} />
         </div>
         <div>
           <label>COD: 280</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1V3z13rstOKveVflp-_HrjovkHh_dwMz3/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Irma/Fem/280.mp3'} />
         </div>
         <div>
           <label>COD: 281</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/10wOwD2tNyejSOy4eeZCirrL3Dtf4ro2s/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Irma/Fem/281.mp3'} />
         </div>
         <div>
           <label>COD: 282</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1i6JYskgq88edMTCkZ0RV9gSFgj1jGsls/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Irma/Fem/282.mp3'} />
         </div>
         <div>
           <label>COD: 283</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1Tu-5C7Um_H0s29LTUWUKwx2JijG14Xwr/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Irma/Fem/283.mp3'} />
         </div>
         <div>
           <label>COD: 284</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/12DiALh5DrreEmL7QXTgbssl8iWS_bGWq/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Irma/Fem/284.mp3'} />
         </div>
       </ContainerCss>
     </div>

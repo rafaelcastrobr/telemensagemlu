@@ -17,27 +17,27 @@ export default function AnivFilhaFem() {
       <ContainerCss>
         <div>
           <label>COD: 145</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1IBOK8hBSvrMaANUYWa8dHcau7m0KSg2f/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/FILHA/FILHA+FEM/145.mp3'} />
         </div>
         <div>
           <label>COD: 146</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/14Yqgh1vFZdqVjHi7lMveSejtccn99ujy/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/FILHA/FILHA+FEM/146.mp3'} />
         </div>
         <div>
           <label>COD: 147</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1ygT6Y4Gn5dKFAWiDvi3_uitUTGt39w_C/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/FILHA/FILHA+FEM/147.mp3'} />
         </div>
         <div>
           <label>COD: 148</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1U3Ekxrs1gxn7Tf8AQKB2ak6OZUCJhFkI/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/FILHA/FILHA+FEM/148.mp3'} />
         </div>
         <div>
           <label>COD: 149</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/18DdF0LqmOtmXjIjjXojUxVHx11e4GcQ6/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/FILHA/FILHA+FEM/149.mp3'} />
         </div>
         <div>
           <label>COD: 150</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1NVEwdRCPVDiRFaqPYmAHGm9NMTIjTBz9/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/FILHA/FILHA+FEM/150.mp3'} />
         </div>
       </ContainerCss>
     </div>

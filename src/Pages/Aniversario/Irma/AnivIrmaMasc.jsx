@@ -17,27 +17,27 @@ export default function AnivIrmaMasc() {
       <ContainerCss>
         <div>
           <label>COD: 285</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/16mzOVUrEs28MLMjh-qJqlSK7cz46lBJ5/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Irma/Masc/285.mp3'} />
         </div>
         <div>
           <label>COD: 286</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1am6SsCk-VTkm3-IHlsbMxQXRzETlxJPz/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Irma/Masc/286.mp3'} />
         </div>
         <div>
           <label>COD: 287</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1eRLgeRrSsRk-36fFrnFpcR7V1TzNvwu4/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Irma/Masc/287.mp3'} />
         </div>
         <div>
           <label>COD: 288</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/16DnjI5buFUgrAQ1yA8UX8L1qYyNt0F5M/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Irma/Masc/288.mp3'} />
         </div>
         <div>
           <label>COD: 289</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1CGnL4Wa_wNCKMVzjhiOKP2tvmBDMwTNH/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Irma/Masc/289.mp3'} />
         </div>
         <div>
           <label>COD: 290</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1g2hG0yKG5eZzVX_7P6zLbcqYXbmhf6vx/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/Irma/Masc/290.mp3'} />
         </div>
       </ContainerCss>
     </div>

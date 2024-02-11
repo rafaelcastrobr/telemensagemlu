@@ -21,35 +21,35 @@ export default function AnivMaeFem() {
       <ContainerCss>
         <div>
           <label>COD: 153</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1NeNo6n5JaDc_tyx4qTZyceGC-AXkiOnU/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/FEM/MAE/153.mp3'} />
         </div>
         <div>
           <label>COD: 154</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1g8l9yFECHcGFmNzKjW1j1b8SkEvZJqPQ/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/FEM/MAE/154.mp3'} />
         </div>
         <div>
           <label>COD: 155</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1xqlv_3TcOSFuVA5Bb4AauTlITmYvyDey/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/FEM/MAE/155.mp3'} />
         </div>
         <div>
           <label>COD:  156</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1KTGMgzcwVxSmwMVa8rPOLnUpzjq-gylH/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/FEM/MAE/156.mp3'} />
         </div>
         <div>
           <label>COD:  157</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/156CJRSGkFccoRaXbh1p-vKtUNl1RwIoG/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/FEM/MAE/157.mp3'} />
         </div>
         <div>
           <label>COD: 158</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1hEu60B0A4-_DAvGL7sRKej4LNR6BJmzc/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/FEM/MAE/158.mp3'} />
         </div>
         <div>
           <label>COD: 159</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1Sg33Ck-IZS9d-Nq4XZNOT4gz8PvyCtvH/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/FEM/MAE/159.mp3'} />
         </div>
         <div>
           <label>COD: 160</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1Ge3u2-537VyS_iXr70m5h9FscFO3ba2b/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/FEM/MAE/160.mp3'} />
         </div>
       </ContainerCss>
     </div>

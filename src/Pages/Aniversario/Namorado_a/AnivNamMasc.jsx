@@ -21,39 +21,39 @@ export default function AnivNamMasc() {
       <ContainerCss>
         <div>
           <label>COD: 181</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1rDo_Eb-4lBsu4ESRgAucJHYfJzEcBNhI/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/MASC/NAMORADA/181.mp3'} />
         </div>
         <div>
           <label>COD: 182</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1U0Zdhuog-GDHoqAzg1TMrqGFagon9dxy/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/MASC/NAMORADA/182.mp3'} />
         </div>
         <div>
           <label>COD: 183</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/18uMMArI_-v4y0GGzJeDrIv3NL_UfmzfP/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/MASC/NAMORADA/183.mp3'} />
         </div>
         <div>
           <label>COD: 184</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/12tHTmP5DGkygNRU8PG5-uYboIiXhczVe/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/MASC/NAMORADA/184.mp3'} />
         </div>
         <div>
           <label>COD: 185</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1krF-JBePWBtuQY0QMtkW-AZ_QZ9PP3Vw/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/MASC/NAMORADA/185.mp3'} />
         </div>
         <div>
           <label>COD: 186</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/19WFMKDA7RFBRDEmjgXZOtkFsyDtdDcoH/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/MASC/NAMORADA/186.mp3'} />
         </div>
         <div>
           <label>COD: 187</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1kQg1XuW8PsNQ2sAFZEtFB20X6CBuFuuH/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/MASC/NAMORADA/187.mp3'} />
         </div>
         <div>
           <label>COD: 188</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1paz0Dw4n1NAqXkojN7o0wHSNxZujUnZp/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/MASC/NAMORADA/188.mp3'} />
         </div>
         <div>
           <label>COD: 189</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1W5kP1yCtl1S-E4xJCsJnhzzATEXF-F2Z/view?usp=sharing')} />
+          <Player link={'https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/ANIVERSARIO/MASC/NAMORADA/189.mp3'} />
         </div>
       </ContainerCss>
     </div>
