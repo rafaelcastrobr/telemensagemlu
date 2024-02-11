@@ -1,13 +1,6 @@
 import { Link } from "react-router-dom";
 
-/*
 
-<div>
-      <Link to='/desculpas'><button className='btn_entrar_appcss masc'>DESCULPAS</button></Link>
-      </div>
-
-
-*/
 
 export default function RomanticasInicial() {
   return (
@@ -17,7 +10,9 @@ export default function RomanticasInicial() {
       <div>
       <Link to='/romanticas'><button className='btn_entrar_appcss fem'>ROMANTICAS</button></Link>
       </div>
-
+      <div>
+      <Link to='/desculpas'><button className='btn_entrar_appcss masc'>DESCULPAS</button></Link>
+      </div>
       
     </div>
 
