@@ -7,6 +7,7 @@ import pai from '../img/icons8-usuario-masculino-40.png'
 import natal from '../img/icons8-Arvore-de-natal-40.png'
 import maes from '../img/icons8-amamentação-40.png'
 import agradecimento from '../img/icons8-comédia-40.png'
+import diadamulher from '../img/icons8-mulher-em-pé-40.png'
 
 
 const BoxTitle = styled.div`
@@ -83,6 +84,10 @@ export default function Home() {
         <div className="box-btn">
 
 
+        <div className="box-btn-style">
+            <img className="box-btn-ico" src={diadamulher} alt="" />
+            <Link to='/dia-das-mulheres'><button className='btn_entrar_appcss btn-opcao'>DIA DAS MULHERES</button></Link>
+          </div>
 
         <div className="box-btn-style">
             <img className="box-btn-ico" src={bolo} alt="" />
@@ -104,7 +109,7 @@ export default function Home() {
         <p>Encontrou algum erro? Entre em contato!</p>
       </div>
       <div style={{ display: 'none' }}>
-        ultima 358 última adc desculparomantica
+        ultima 398 última adc
       </div>
     </BoxTitle>
   )

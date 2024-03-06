@@ -56,6 +56,13 @@ import Romanticas from './Pages/Romantica/Neutra_hot/Romanticas'
 import RomanticasInicial from './Pages/Romantica/RomanticaInicial'
 import DesculpasRomanticaFem from './Pages/Romantica/Desculpas/DesculpasRomanticaFem'
 import DesculpasRomanticas from './Pages/Romantica/Desculpas/DesculpasRomanticas'
+import AnivAmigoFem from './Pages/Aniversario/Amigo/AnivAmigoFem'
+import DiaDasMulheres from './Pages/DiadasMulheres/diaDasMulheres'
+import DiaDasMulheresEsposaMasc from './Pages/DiadasMulheres/masc/diaDasMulheres_esposa_masc'
+import DiaDasMulheresNamoradaMasc from './Pages/DiadasMulheres/masc/diaDasMulheres_namorada_masc'
+import DiaDasMulheresAmigaMasc from './Pages/DiadasMulheres/masc/diaDasMulheres_amiga_masc'
+import DiaDasMulheresMaeMasc from './Pages/DiadasMulheres/masc/diaDasMulheres_mae_masc'
+import DiaDasMulheresMaeFem from './Pages/DiadasMulheres/fem/diaDasMulheres_mae_fem'
 
 
 document.title = 'WhatsMensagem da Lú'
@@ -83,12 +90,24 @@ export default function App() {
           <Route path='/aniversario/irma/feminino' element={<AnivIrmaFem />} />
           <Route path='/aniversario/irmao/feminino' element={<AnivIrmaoFem />} />
           <Route path='/aniversario/amiga/feminino' element={<AnivAmigaFem />} />
+          <Route path='/aniversario/amigo/feminino' element={<AnivAmigoFem />} />
           <Route path='/aniversario/filha/feminino' element={<AnivFilhaFem />} />
           <Route path='/aniversario/filho/feminino' element={<AnivFilhoFem />} />
           <Route path='/aniversario/namorado/feminino' element={<AnivNamFem />} />
           <Route path='/aniversario/esposo/feminino' element={<AnivEspFem />} />
           <Route path='/aniversario/tio/feminino' element={<AnivTioFem />} />
           <Route path='/aniversario/neta/feminino' element={<AnivNetaFem/>} />
+
+          <Route path='/dia-das-mulheres' element={<DiaDasMulheres />} />
+
+          <Route path='/dia-das-mulheres/mae/feminino' element={<DiaDasMulheresMaeFem />} />
+
+
+          <Route path='/dia-das-mulheres/esposa' element={<DiaDasMulheresEsposaMasc />} />
+          <Route path='/dia-das-mulheres/namorada' element={<DiaDasMulheresNamoradaMasc />} />
+          <Route path='/dia-das-mulheres/amiga' element={<DiaDasMulheresAmigaMasc />} />
+          <Route path='/dia-das-mulheres/mae/masculino' element={<DiaDasMulheresMaeMasc />} />
+
 
           <Route path='/aniversario/filho/masculino' element={<AnivFilhoMasc />} />
           <Route path='/aniversario/filha/masculino' element={<AnivFilhaMasc />} />
