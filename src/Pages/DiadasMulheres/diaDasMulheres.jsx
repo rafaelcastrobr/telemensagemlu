@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export default function DiaDasMulheres() {
   return (
     <div>
-      <h1>Escolha o tipo</h1>
+      <h1>Escolha o tipo | DIA DAS MULHERES</h1>
       <div>
       <Link to='mae/feminino'><button className='btn_entrar_appcss fem'>FEMINO MÃE</button></Link>
       </div>
