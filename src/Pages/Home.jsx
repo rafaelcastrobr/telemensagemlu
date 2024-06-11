@@ -46,10 +46,7 @@ margin-bottom: 20px;
           
           
           
-           <div className="box-btn-style">
-            <img className="box-btn-ico" src={flecha} alt="" />
-            <Link to='/namorados'><button className='btn_entrar_appcss btn-opcao'>DIA DOS NAMORADOS</button></Link>
-          </div>
+         
 
           <div className="box-btn-style">
             <img className="box-btn-ico" src={maes} alt="" />
@@ -83,13 +80,17 @@ export default function Home() {
         <p>Entre em contato!</p>
         <div className="box-btn">
 
+          <div className="box-btn-style">
+            <img className="box-btn-ico" src={flecha} alt="" />
+            <Link to='/namorados'><button className='btn_entrar_appcss btn-opcao'>DIA DOS NAMORADOS</button></Link>
+          </div>
 
-        <div className="box-btn-style">
+          <div className="box-btn-style">
             <img className="box-btn-ico" src={diadamulher} alt="" />
             <Link to='/dia-das-mulheres'><button className='btn_entrar_appcss btn-opcao'>DIA DAS MULHERES</button></Link>
           </div>
 
-        <div className="box-btn-style">
+          <div className="box-btn-style">
             <img className="box-btn-ico" src={bolo} alt="" />
             <Link to='/aniversario'><button className='btn_entrar_appcss btn-opcao'>ANIVERSÁRIOS</button></Link>
           </div>

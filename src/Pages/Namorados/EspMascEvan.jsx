@@ -16,23 +16,23 @@ export default function EspMascEvan() {
       <ContainerCss>
         <div>
           <label>COD: 123</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1uyqrco0gChd9R3Gwrh3_P8Ll2VQppUsN/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/Esposa/Evangelica/123.mp3')} />
         </div>
         <div>
           <label>COD: 124</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1SqcFnwBFRhi9quElbOexr6_MjV6ofNFS/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/Esposa/Evangelica/124.mp3')} />
         </div>
         <div>
           <label>COD: 125</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1XvOiTCj2i5TyiVewHoufzSO5h3SyXmWK/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/Esposa/Evangelica/125.mp3')} />
         </div>
         <div>
           <label>COD: 126</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1gLS2wLRuQnnJ5y7_Jl8sECtyBeY0vmkP/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/Esposa/Evangelica/126.mp3')} />
         </div>
         <div>
           <label>COD: 127</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1rm_NJt4vGME7XBOL0yGMLn2-mYRMuzyS/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/Esposa/Evangelica/127.mp3')} />
         </div>
     
       </ContainerCss>

@@ -16,35 +16,35 @@ export default function NamMasc() {
       <ContainerCss>
         <div>
           <label>COD: 133</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1WbD6MLoTw4I9r7aV_dvK6EtDvJRpfC39/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/133.mp3')} />
         </div>
         <div>
           <label>COD: 134</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1gN90aBYv6XOEsF30v769WHmXAuWDVEvE/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/134.mp3')} />
         </div>
         <div>
           <label>COD: 135</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1k1snKLI7tqgalIUocNVsYs3GmLilS2oe/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/135.mp3')} />
         </div>
         <div>
           <label>COD: 136</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1noi3F8qariArlrxQjMfE1oX4Nm-VwijY/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/136.mp3')} />
         </div>
         <div>
           <label>COD: 137</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1vy84EGkgaorz84CbU5G2SnoWsqwR2p2B/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/137.mp3')} />
         </div>
         <div>
           <label>COD: 138</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/15xJLOqXLvrYuMqD0W3Zsv0urYSpAz-xP/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/138.mp3')} />
         </div>
         <div>
           <label>COD: 139</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1GJ9-WrjqdEI0rIXtRGtWaaL-l-CPZbZy/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/139.mp3')} />
         </div>
         <div>
           <label>COD: 140</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1UmE2gIbpPmwsvj0XG4BcMmoMYuZSiXRO/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/140.mp3')} />
         </div>
       
       </ContainerCss>

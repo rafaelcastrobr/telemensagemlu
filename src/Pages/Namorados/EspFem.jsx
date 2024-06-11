@@ -16,23 +16,23 @@ export default function EspFem() {
       <ContainerCss>
         <div>
           <label>COD: 118</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1l2Nbqs1eefWFeiyqqkpiutFn3EcDFpOd/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Fem/Esposo/118.mp3')} />
         </div>
         <div>
           <label>COD: 119</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1zX0vOLOcjw5tqUKgGhLFuwhu5m4c0Et-/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Fem/Esposo/119.mp3')} />
         </div>
         <div>
           <label>COD: 120</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1zX0vOLOcjw5tqUKgGhLFuwhu5m4c0Et-/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Fem/Esposo/120.mp3')} />
         </div>
         <div>
           <label>COD: 121</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1U_Kvd_Gti8w_k5BtYvl5Ze2iov1tddic/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Fem/Esposo/121.mp3')} />
         </div>
         <div>
           <label>COD: 122</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1JUuZ3KKcz2lbHNzmmJUqvsyu-p9mtTOF/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Fem/Esposo/122.mp3')} />
         </div>
       
       </ContainerCss>

@@ -16,27 +16,27 @@ export default function EspMasc() {
       <ContainerCss>
         <div>
           <label>COD: 112</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1G7jiqVbrTgSUkfHZpDBvWtcza67MAzc6/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/Esposa/112.mp3')} />
         </div>
         <div>
           <label>COD: 113</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1oOt8NZu6-AJ4TiDHP-1QTvm9K7HCnzds/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/Esposa/113.mp3')} />
         </div>
         <div>
           <label>COD: 114</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1gIYQCrzUMtRhJDMw-mlCm5TDfkHzYaOn/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/Esposa/114.mp3')} />
         </div>
         <div>
           <label>COD: 115</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/12rMISMp9f-SAtKCO4vY3TqyBGUIFy2pb/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/Esposa/115.mp3')} />
         </div>
         <div>
           <label>COD: 116</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1w_opPtmuLHsgglcIX2cWadDKtvwy33nD/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/Esposa/116.mp3')} />
         </div>
         <div>
           <label>COD: 117</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1MnWHNFhNYNI_aMVs4ESwLT4H-x_cW-ed/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Masc/Esposa/117.mp3')} />
         </div>
      
 

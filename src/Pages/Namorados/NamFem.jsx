@@ -16,39 +16,39 @@ export default function NamFem() {
       <ContainerCss>
         <div>
           <label>COD: 101</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1nKIZCLwSNh32d4bdwKqSuBM5IsfHdqlb/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Fem/101.mp3')} />
         </div>
         <div>
           <label>COD: 102</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1YXDx0TkI9ATyyCBE1_JCWd7CXjrs0by_/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Fem/102.mp3')} />
         </div>
         <div>
           <label>COD: 103</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1zepAVlhMSri3_6qAusyDqSCWinH-8E3E/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Fem/103.mp3')} />
         </div>
         <div>
           <label>COD: 104</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1hreMxDt6TKI9enmY5MAgIJ7lRJtc0lbW/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Fem/104.mp3')} />
         </div>
         <div>
           <label>COD: 105</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1vxG3vlbOlZQlwPu-ZDcsu9fNDNdeNZ1n/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Fem/105.mp3')} />
         </div>
         <div>
           <label>COD: 106</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1sRzP1XNnBjCiSSW8atL8ONWQts5b8P7t/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Fem/106.mp3')} />
         </div>
         <div>
           <label>COD: 107</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1jdiyGuE2IeSPnwORPTW6Wl6Cm1ZGXjst/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Fem/107.mp3')} />
         </div>
         <div>
           <label>COD: 108</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1iSziynnTdxQ5kxig_mwtA-dnPz5to2JW/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Fem/108.mp3')} />
         </div>
         <div>
           <label>COD: 109</label>
-          <Player link={ReplaceWord('https://drive.google.com/file/d/1kWkepthsncuf_mTnEyL9YqnMhTgajLhN/view?usp=sharing')} />
+          <Player link={ReplaceWord('https://whatsmensagem.s3.sa-east-1.amazonaws.com/telemensagem/Namorados/Fem/109.mp3')} />
         </div>
 
       </ContainerCss>
