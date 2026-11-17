@@ -5,12 +5,19 @@ import { PAGINAS } from './data/mensagens'
 import { MODO_NATAL } from './data/config'
 import { MENU_INICIAL, TELAS_DE_ESCOLHA, botoesDaTela } from './data/ocasioes'
 import { linkDoAudio } from './utils/audio'
+import { idDoDrive } from './utils/drive'
 
 // O Player real toca áudio; nestes testes só importa o que a página entrega a ele.
 jest.mock('./components/Player', () => {
   const React = require('react')
   return function PlayerFalso({ link, children }) {
     return React.createElement('div', { 'data-testid': 'player', 'data-link': link }, children)
+  }
+})
+jest.mock('./components/PlayerDrive', () => {
+  const React = require('react')
+  return function PlayerDriveFalso({ id, children }) {
+    return React.createElement('div', { 'data-testid': 'player', 'data-link': `drive:${id}` }, children)
   }
 })
 
@@ -91,7 +98,8 @@ describe('páginas de mensagens', () => {
     const players = screen.getAllByTestId('player')
     expect(players.map((player) => within(player).getByText(/^COD:/).textContent))
       .toEqual(pagina.audios.map((audio) => `COD: ${audio.cod}`))
+    // áudio do Drive usa o player do Drive (identificado pelo código do arquivo); os demais, o Player normal
     expect(players.map((player) => player.getAttribute('data-link')))
-      .toEqual(pagina.audios.map(linkDoAudio))
+      .toEqual(pagina.audios.map((audio) => (idDoDrive(audio.link) ? `drive:${idDoDrive(audio.link)}` : linkDoAudio(audio))))
   })
 })

@@ -1,6 +1,6 @@
 import { S3_BASE } from '../data/config'
 import { linkDoAudio } from './audio'
-import { converterLinkDrive } from './drive'
+import { converterLinkDrive, idDoDrive, playerDoDrive } from './drive'
 
 describe('converterLinkDrive', () => {
   test('converte o link de compartilhamento do Drive em link de reprodução', () => {
@@ -18,6 +18,21 @@ describe('converterLinkDrive', () => {
   test('não altera links que não são do Drive', () => {
     const url = 'https://exemplo.com/audio.mp3'
     expect(converterLinkDrive(url)).toBe(url)
+  })
+})
+
+describe('idDoDrive e playerDoDrive', () => {
+  test('acha o código do arquivo no link do Drive', () => {
+    expect(idDoDrive('https://drive.google.com/file/d/ABC-1_2/view?usp=sharing')).toBe('ABC-1_2')
+  })
+
+  test('devolve null para o que não é do Drive', () => {
+    expect(idDoDrive('https://exemplo.com/audio.mp3')).toBeNull()
+    expect(idDoDrive(undefined)).toBeNull()
+  })
+
+  test('monta o endereço do player do Drive', () => {
+    expect(playerDoDrive('ABC123')).toBe('https://drive.google.com/file/d/ABC123/preview')
   })
 })
 
