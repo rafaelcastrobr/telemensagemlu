@@ -67,22 +67,77 @@ const ProgressoCss = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 10px;
+  margin-top: 6px;
 `
 
-const TrilhaCss = styled.div`
+// Barra de posição: um <input type="range"> (funciona com mouse, toque e teclado).
+// A parte já tocada é pintada com a variável --p (0 a 1), que o componente atualiza.
+const BarraCss = styled.input`
   flex: 1;
-  height: 6px;
-  overflow: hidden;
-  background: #e3e3e3;
-  border-radius: 3px;
-`
+  min-width: 0;
+  height: 28px; /* área de toque maior que a trilha */
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  touch-action: pan-y; /* arrasta pros lados na barra; rolar a página continua na vertical */
+  -webkit-appearance: none;
+  appearance: none;
 
-const PreenchimentoCss = styled.div`
-  height: 100%;
-  background: #EE6C4D;
-  border-radius: 3px;
-  transition: width 0.25s linear;
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: 3px solid #3d5a80;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  &::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(
+      to right,
+      #EE6C4D calc(9px + (100% - 18px) * var(--p, 0)),
+      #e3e3e3 calc(9px + (100% - 18px) * var(--p, 0))
+    );
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    width: 18px;
+    height: 18px;
+    margin-top: -6px;
+    background: #EE6C4D;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  }
+
+  &::-moz-range-track {
+    height: 6px;
+    background: #e3e3e3;
+    border-radius: 3px;
+  }
+
+  &::-moz-range-progress {
+    height: 6px;
+    background: #EE6C4D;
+    border-radius: 3px;
+  }
+
+  &::-moz-range-thumb {
+    box-sizing: border-box;
+    width: 18px;
+    height: 18px;
+    background: #EE6C4D;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  }
 `
 
 const TempoCss = styled.span`
@@ -103,9 +158,40 @@ export default function Player({ link, nome = 'mensagem', children }) {
   const [tocando, setTocando] = useState(false)
   const [tocado, setTocado] = useState(0)
   const [duracao, setDuracao] = useState(0)
+  // Arraste da barra: enquanto o dedo/mouse está na barra, "posicao" mostra onde vai cair
+  // e o progresso do áudio não mexe na barra. O áudio só pula ao soltar.
+  const [arrastando, setArrastando] = useState(false)
+  const [posicao, setPosicao] = useState(null)
+  const posicaoRef = useRef(null)
   const playerRef = useRef(null)
 
   const pausar = useCallback(() => setTocando(false), [])
+
+  // Leva o áudio para um ponto (em segundos)
+  const irPara = useCallback((segundos) => {
+    setTocado(segundos)
+    if (playerRef.current) playerRef.current.seekTo(segundos, 'seconds')
+  }, [])
+
+  // Enquanto arrasta, soltar o mouse/dedo em qualquer lugar da tela confirma a nova posição
+  useEffect(() => {
+    if (!arrastando) return undefined
+
+    function soltou() {
+      const destino = posicaoRef.current
+      posicaoRef.current = null
+      setPosicao(null)
+      setArrastando(false)
+      if (destino !== null) irPara(destino)
+    }
+
+    window.addEventListener('pointerup', soltou)
+    window.addEventListener('pointercancel', soltou)
+    return () => {
+      window.removeEventListener('pointerup', soltou)
+      window.removeEventListener('pointercancel', soltou)
+    }
+  }, [arrastando, irPara])
 
   // Ao sair da página, esquece este player se ele era o "atual"
   useEffect(() => {
@@ -141,7 +227,26 @@ export default function Player({ link, nome = 'mensagem', children }) {
   }
 
 
-  const porcentagem = duracao > 0 ? Math.min(100, (tocado / duracao) * 100) : 0
+  function aoComecarArraste() {
+    posicaoRef.current = null // só pula se a posição realmente mudar
+    setArrastando(true)
+  }
+
+
+  function aoMoverBarra(e) {
+    const valor = Number(e.target.value)
+    if (arrastando) {
+      posicaoRef.current = valor
+      setPosicao(valor)
+    } else {
+      irPara(valor) // teclado (setas, Home, End): pula na hora
+    }
+  }
+
+
+  const exibido = posicao ?? tocado
+  const fracao = duracao > 0 ? Math.min(1, exibido / duracao) : 0
+  const barraAtiva = duracao > 0 && url !== null
 
   return (
     <CartaoCss>
@@ -152,7 +257,7 @@ export default function Player({ link, nome = 'mensagem', children }) {
         width='0px'
         height='0px'
         progressInterval={250}
-        onProgress={(p) => setTocado(p.playedSeconds)}
+        onProgress={(p) => { if (!arrastando) setTocado(p.playedSeconds) }}
         onDuration={setDuracao}
         onEnded={aoTerminar}
         onError={pausar}
@@ -185,17 +290,20 @@ export default function Player({ link, nome = 'mensagem', children }) {
       </LinhaCss>
 
       <ProgressoCss>
-        <TrilhaCss
-          role='progressbar'
-          aria-label={`Progresso de ${nome}`}
-          aria-valuemin={0}
-          aria-valuemax={Math.round(duracao)}
-          aria-valuenow={Math.round(tocado)}
-        >
-          <PreenchimentoCss style={{ width: `${porcentagem}%` }} />
-        </TrilhaCss>
+        <BarraCss
+          type='range'
+          aria-label={`Posição de ${nome}`}
+          min={0}
+          max={duracao > 0 ? duracao : 1}
+          step='any'
+          value={exibido}
+          disabled={!barraAtiva}
+          onPointerDown={aoComecarArraste}
+          onChange={aoMoverBarra}
+          style={{ '--p': fracao }}
+        />
         <TempoCss>
-          <Duration seconds={tocado} /> / {duracao > 0 ? <Duration seconds={duracao} /> : '--:--'}
+          <Duration seconds={exibido} /> / {duracao > 0 ? <Duration seconds={duracao} /> : '--:--'}
         </TempoCss>
       </ProgressoCss>
     </CartaoCss>

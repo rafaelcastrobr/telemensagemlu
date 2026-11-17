@@ -14,10 +14,11 @@ jest.mock('react-player', () => {
   })
 })
 
+beforeEach(() => { chamadasDeSeek.length = 0 })
 afterEach(cleanup)
 
 const tocando = (url) => screen.getByTestId(`audio-${url}`).getAttribute('data-playing')
-const barra = (nome) => screen.getByRole('progressbar', { name: `Progresso de ${nome}` })
+const barra = (nome) => screen.getByRole('slider', { name: `Posição de ${nome}` })
 
 describe('Player', () => {
   test('mostra o que vem em children no cartão', () => {
@@ -49,7 +50,7 @@ describe('Player', () => {
 
   test('mostra o progresso e o tempo', () => {
     render(<Player link="c.mp3" nome="C" />)
-    expect(barra('C').getAttribute('aria-valuenow')).toBe('0')
+    expect(barra('C').value).toBe('0')
     expect(document.body.textContent).toContain('0:00 / --:--')
 
     act(() => propsPorUrl['c.mp3'].onDuration(75))
@@ -58,8 +59,8 @@ describe('Player', () => {
     fireEvent.click(screen.getByLabelText('Tocar C'))
     act(() => propsPorUrl['c.mp3'].onProgress({ playedSeconds: 30 }))
     expect(document.body.textContent).toContain('0:30 / 1:15')
-    expect(barra('C').getAttribute('aria-valuenow')).toBe('30')
-    expect(barra('C').getAttribute('aria-valuemax')).toBe('75')
+    expect(barra('C').value).toBe('30')
+    expect(barra('C').max).toBe('75')
   })
 
   test('ao terminar, volta ao início e ao botão de tocar', () => {
@@ -82,9 +83,89 @@ describe('Player', () => {
 
     fireEvent.click(screen.getByLabelText('Parar E'))
     expect(screen.getByTestId('audio-null')).toBeTruthy()
-    expect(barra('E').getAttribute('aria-valuenow')).toBe('0')
+    expect(barra('E').value).toBe('0')
 
     fireEvent.click(screen.getByLabelText('Tocar E'))
     expect(tocando('e.mp3')).toBe('true')
+  })
+
+  describe('barra de posição (arrastar)', () => {
+    function comDuracao(link, nome, segundos) {
+      render(<Player link={link} nome={nome} />)
+      act(() => propsPorUrl[link].onDuration(segundos))
+      return barra(nome)
+    }
+
+    test('fica desativada enquanto a duração não é conhecida e depois de parar', () => {
+      render(<Player link="f.mp3" nome="F" />)
+      expect(barra('F').disabled).toBe(true)
+
+      act(() => propsPorUrl['f.mp3'].onDuration(60))
+      expect(barra('F').disabled).toBe(false)
+
+      fireEvent.click(screen.getByLabelText('Parar F'))
+      expect(barra('F').disabled).toBe(true)
+    })
+
+    test('arrastar e soltar leva o áudio para a posição escolhida', () => {
+      const slider = comDuracao('g.mp3', 'G', 100)
+      fireEvent.click(screen.getByLabelText('Tocar G'))
+      act(() => propsPorUrl['g.mp3'].onProgress({ playedSeconds: 10 }))
+
+      fireEvent.pointerDown(slider)
+      fireEvent.change(slider, { target: { value: '45' } })
+      // durante o arraste a barra mostra o destino e não pula ainda
+      expect(slider.value).toBe('45')
+      expect(document.body.textContent).toContain('0:45 / 1:40')
+      expect(chamadasDeSeek).toEqual([])
+
+      fireEvent.pointerUp(window)
+      expect(chamadasDeSeek).toEqual([[45, 'seconds']])
+      expect(barra('G').value).toBe('45')
+    })
+
+    test('o progresso do áudio não puxa a barra enquanto arrasta', () => {
+      const slider = comDuracao('h.mp3', 'H', 100)
+      fireEvent.click(screen.getByLabelText('Tocar H'))
+
+      fireEvent.pointerDown(slider)
+      fireEvent.change(slider, { target: { value: '80' } })
+      act(() => propsPorUrl['h.mp3'].onProgress({ playedSeconds: 12 }))
+      expect(barra('H').value).toBe('80')
+
+      fireEvent.pointerUp(window)
+      act(() => propsPorUrl['h.mp3'].onProgress({ playedSeconds: 81 }))
+      expect(barra('H').value).toBe('81')
+    })
+
+    test('segurar sem mexer não faz o áudio voltar', () => {
+      const slider = comDuracao('i.mp3', 'I', 100)
+      fireEvent.click(screen.getByLabelText('Tocar I'))
+      act(() => propsPorUrl['i.mp3'].onProgress({ playedSeconds: 20 }))
+
+      fireEvent.pointerDown(slider)
+      fireEvent.pointerUp(window)
+      expect(chamadasDeSeek).toEqual([])
+    })
+
+    test('pelo teclado, cada passo leva o áudio na hora', () => {
+      const slider = comDuracao('j.mp3', 'J', 100)
+      fireEvent.change(slider, { target: { value: '20' } })
+      expect(chamadasDeSeek).toEqual([[20, 'seconds']])
+      expect(slider.value).toBe('20')
+    })
+
+    test('funciona com o áudio pausado e mantém a posição ao tocar', () => {
+      const slider = comDuracao('k.mp3', 'K', 100)
+      fireEvent.pointerDown(slider)
+      fireEvent.change(slider, { target: { value: '60' } })
+      fireEvent.pointerUp(window)
+      expect(chamadasDeSeek).toEqual([[60, 'seconds']])
+      expect(tocando('k.mp3')).toBe('false')
+
+      fireEvent.click(screen.getByLabelText('Tocar K'))
+      expect(tocando('k.mp3')).toBe('true')
+      expect(barra('K').value).toBe('60')
+    })
   })
 })
