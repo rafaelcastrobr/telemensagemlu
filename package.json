@@ -1,6 +1,7 @@
 {
   "name": "telemensagemlu",
   "version": "0.1.0",
+  "description": "WhatsMensagem da Lú: mensagens em áudio para todas as ocasiões",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -19,6 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:ci": "react-scripts test --watchAll=false",
+    "lint": "eslint src --ext .js,.jsx --max-warnings 0",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

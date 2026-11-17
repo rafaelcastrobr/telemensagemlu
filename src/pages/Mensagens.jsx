@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
-import Player from '../Components/Player'
-import ReplaceWord from '../function/replace'
-import { S3_BASE } from '../data/mensagens'
-import pimenta from '../img/icons8-pimenta-chili-40.png'
+import Player from '../components/Player'
+import { linkDoAudio } from '../utils/audio'
+import pimenta from '../assets/icons/pimenta.png'
 
 // O .App centraliza os filhos e encolhe a página ao tamanho do conteúdo; aqui ela ocupa a largura toda
 const PaginaCss = styled.div`
@@ -20,14 +19,8 @@ const ContainerCss = styled.div`
   padding: 0 12px 96px; /* folga embaixo pro botão flutuante do WhatsApp não cobrir o último player */
 `
 
-// Monta o link do áudio: arquivo do S3 (s3) ou URL completa (link, ex.: Google Drive).
-function linkDoAudio(audio) {
-  const url = audio.s3 !== undefined ? S3_BASE + audio.s3 : audio.link
-  return ReplaceWord(url)
-}
-
-// Página única usada por todas as listas de mensagens. Os dados ficam em src/data/mensagens.js
-export default function PaginaMensagens({ titulo, audios }) {
+// Lista de mensagens (áudios) de uma página. Os dados ficam em src/data/mensagens
+export default function Mensagens({ titulo, audios }) {
   return (
     <PaginaCss>
       <h3>{titulo}</h3>

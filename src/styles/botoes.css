@@ -1,0 +1,38 @@
+/* Botões das telas de escolha. fem / masc definem a cor conforme a voz da mensagem. */
+
+.btn_entrar_appcss {
+  border-radius: 10px;
+  width: 15rem;
+  height: 6rem;
+  padding: 7px;
+  color: #E0FBFC;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-opcao {
+  background-color: #a52504;
+}
+
+.fem {
+  background-color: #a52504;
+}
+
+.masc {
+  background-color: #011b70;
+}
+
+.btn_entrar_appcss:active {
+  background-color: #EE6C4D;
+}
+
+.desativado {
+  background-color: #5e5e5e;
+  cursor: none;
+}
+
+.desativado:active {
+  background-color: #5e5e5e;
+}

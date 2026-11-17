@@ -1,0 +1,51 @@
+// Românticas: uma página por item, na ordem em que os botões aparecem na tela de escolha.
+// Como adicionar mensagens e páginas: veja o README.
+
+export const romanticas = [
+  {
+    rota: '/romanticas/feminino',
+    botao: 'FEMININO RÔMANTICA',
+    genero: 'fem',
+    titulo: 'Romântica | voz feminina',
+    audios: [
+      { cod: '231', s3: 'romanticas/F+Neutra/231.mp3' },
+      { cod: '232', s3: 'romanticas/F+Neutra/232.mp3' },
+      { cod: '233', s3: 'romanticas/F+Neutra/233.mp3' },
+      { cod: '234', s3: 'romanticas/F+Neutra/234.mp3' },
+      { cod: '235', s3: 'romanticas/F+Neutra/235.mp3' },
+      { cod: '236', s3: 'romanticas/F+Neutra/236.mp3' },
+      { cod: '237', s3: 'romanticas/F+Neutra/237.mp3' },
+      { cod: '238', s3: 'romanticas/F+Neutra/238.mp3' },
+      { cod: '239', s3: 'romanticas/F+Neutra/239.mp3' },
+      { cod: '240', s3: 'romanticas/F+Neutra/240p.mp3', pimenta: true },
+      { cod: '241', s3: 'romanticas/F+Neutra/241p.mp3', pimenta: true },
+      { cod: '242', s3: 'romanticas/F+Neutra/242p.mp3', pimenta: true },
+      { cod: '243', s3: 'romanticas/F+Neutra/243p.mp3', pimenta: true },
+      { cod: '244', s3: 'romanticas/F+Neutra/244p.mp3', pimenta: true },
+      { cod: '245', s3: 'romanticas/F+Neutra/245p.mp3', pimenta: true },
+    ],
+  },
+  {
+    rota: '/romanticas/masculino',
+    botao: 'MASCULINO RÔMANTICA',
+    genero: 'masc',
+    titulo: 'Romântica | voz masculina',
+    audios: [
+      { cod: '246', s3: 'romanticas/M+Neutra/246.mp3' },
+      { cod: '247', s3: 'romanticas/M+Neutra/247.mp3' },
+      { cod: '248', s3: 'romanticas/M+Neutra/248.mp3' },
+      { cod: '249', s3: 'romanticas/M+Neutra/249.mp3' },
+      { cod: '250', s3: 'romanticas/M+Neutra/250.mp3' },
+      { cod: '251', s3: 'romanticas/M+Neutra/251.mp3' },
+      { cod: '252', s3: 'romanticas/M+Neutra/252.mp3' },
+      { cod: '253', s3: 'romanticas/M+Neutra/253.mp3' },
+      { cod: '254', s3: 'romanticas/M+Neutra/254.mp3' },
+      { cod: '255', s3: 'romanticas/M+Neutra/255p.mp3', pimenta: true },
+      { cod: '256', s3: 'romanticas/M+Neutra/256p.mp3', pimenta: true },
+      { cod: '257', s3: 'romanticas/M+Neutra/257p.mp3', pimenta: true },
+      { cod: '258', s3: 'romanticas/M+Neutra/258p.mp3', pimenta: true },
+      { cod: '259', s3: 'romanticas/M+Neutra/529p.mp3', pimenta: true },
+      { cod: '260', s3: 'romanticas/M+Neutra/260p.mp3', pimenta: true },
+    ],
+  },
+]

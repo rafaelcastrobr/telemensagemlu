@@ -1,0 +1,91 @@
+// Dia dos Namorados: uma página por item, na ordem em que os botões aparecem na tela de escolha.
+// Como adicionar mensagens e páginas: veja o README.
+
+export const namorados = [
+  {
+    rota: '/namorados/feminino',
+    botao: 'FEMININO NAMORADO',
+    genero: 'fem',
+    titulo: 'Feminino Namorado',
+    audios: [
+      { cod: '101', s3: 'Namorados/Fem/101.mp3' },
+      { cod: '102', s3: 'Namorados/Fem/102.mp3' },
+      { cod: '103', s3: 'Namorados/Fem/103.mp3' },
+      { cod: '104', s3: 'Namorados/Fem/104.mp3' },
+      { cod: '105', s3: 'Namorados/Fem/105.mp3' },
+      { cod: '106', s3: 'Namorados/Fem/106.mp3' },
+      { cod: '107', s3: 'Namorados/Fem/107.mp3' },
+      { cod: '108', s3: 'Namorados/Fem/108.mp3' },
+      { cod: '109', s3: 'Namorados/Fem/109.mp3' },
+    ],
+  },
+  {
+    rota: '/namorados/feminino/esposo',
+    botao: 'FEMININO ESPOSO',
+    genero: 'fem',
+    titulo: 'Feminino Esposo',
+    audios: [
+      { cod: '118', s3: 'Namorados/Fem/Esposo/118.mp3' },
+      { cod: '119', s3: 'Namorados/Fem/Esposo/119.mp3' },
+      { cod: '120', s3: 'Namorados/Fem/Esposo/120.mp3' },
+      { cod: '121', s3: 'Namorados/Fem/Esposo/121.mp3' },
+      { cod: '122', s3: 'Namorados/Fem/Esposo/122.mp3' },
+    ],
+  },
+  {
+    rota: '/namorados/feminino/esposo/evangelico',
+    botao: 'FEMININO ESPOSO EVANGÉLICO',
+    genero: 'fem',
+    titulo: 'Femino Esposo Evangélico',
+    audios: [
+      { cod: '128', s3: 'Namorados/Fem/Esposo/Evangelica/128.mp3' },
+      { cod: '129', s3: 'Namorados/Fem/Esposo/Evangelica/129.mp3' },
+      { cod: '130', s3: 'Namorados/Fem/Esposo/Evangelica/130.mp3' },
+      { cod: '131', s3: 'Namorados/Fem/Esposo/Evangelica/131.mp3' },
+      { cod: '132', s3: 'Namorados/Fem/Esposo/Evangelica/132.mp3' },
+    ],
+  },
+  {
+    rota: '/namorados/masculino',
+    botao: 'MASCULINO NAMORADA',
+    genero: 'masc',
+    titulo: 'Masculino',
+    audios: [
+      { cod: '133', s3: 'Namorados/Masc/133.mp3' },
+      { cod: '134', s3: 'Namorados/Masc/134.mp3' },
+      { cod: '135', s3: 'Namorados/Masc/135.mp3' },
+      { cod: '136', s3: 'Namorados/Masc/136.mp3' },
+      { cod: '137', s3: 'Namorados/Masc/137.mp3' },
+      { cod: '138', s3: 'Namorados/Masc/138.mp3' },
+      { cod: '139', s3: 'Namorados/Masc/139.mp3' },
+      { cod: '140', s3: 'Namorados/Masc/140.mp3' },
+    ],
+  },
+  {
+    rota: '/namorados/masculino/esposa',
+    botao: 'MASCULINO ESPOSA',
+    genero: 'masc',
+    titulo: 'Masculino Esposa',
+    audios: [
+      { cod: '112', s3: 'Namorados/Masc/Esposa/112.mp3' },
+      { cod: '113', s3: 'Namorados/Masc/Esposa/113.mp3' },
+      { cod: '114', s3: 'Namorados/Masc/Esposa/114.mp3' },
+      { cod: '115', s3: 'Namorados/Masc/Esposa/115.mp3' },
+      { cod: '116', s3: 'Namorados/Masc/Esposa/116.mp3' },
+      { cod: '117', s3: 'Namorados/Masc/Esposa/117.mp3' },
+    ],
+  },
+  {
+    rota: '/namorados/masculino/esposa/evangelica',
+    botao: 'MASCULINO ESPOSA EVANGÉLICA',
+    genero: 'masc',
+    titulo: 'Masculino Esposa Evangélica',
+    audios: [
+      { cod: '123', s3: 'Namorados/Masc/Esposa/Evangelica/123.mp3' },
+      { cod: '124', s3: 'Namorados/Masc/Esposa/Evangelica/124.mp3' },
+      { cod: '125', s3: 'Namorados/Masc/Esposa/Evangelica/125.mp3' },
+      { cod: '126', s3: 'Namorados/Masc/Esposa/Evangelica/126.mp3' },
+      { cod: '127', s3: 'Namorados/Masc/Esposa/Evangelica/127.mp3' },
+    ],
+  },
+]
