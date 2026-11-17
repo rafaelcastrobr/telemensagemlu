@@ -21,11 +21,19 @@ function abrir(rota) {
 afterEach(cleanup)
 
 describe('página inicial', () => {
-  test('mostra só os botões ativos do menu, na ordem', () => {
+  test('mostra só os itens ativos do menu, na ordem, cada um levando à sua tela', () => {
     abrir('/')
-    const ativos = MENU_INICIAL.filter((item) => item.ativo).map((item) => item.texto)
-    const exibidos = screen.getAllByRole('button').map((botao) => botao.textContent.trim())
-    expect(exibidos).toEqual([...ativos, 'SITE EM REFORMA'])
+    const ativos = MENU_INICIAL.filter((item) => item.ativo)
+    const links = within(screen.getByRole('navigation', { name: 'Ocasiões' })).getAllByRole('link')
+
+    expect(links.map((link) => link.textContent.trim())).toEqual(ativos.map((item) => item.texto))
+    expect(links.map((link) => link.getAttribute('href'))).toEqual(ativos.map((item) => '#' + item.rota))
+  })
+
+  test('o aviso de reforma é só um aviso, não um botão', () => {
+    abrir('/')
+    expect(screen.getByText('SITE EM REFORMA')).toBeTruthy()
+    expect(screen.queryAllByRole('button')).toEqual([])
   })
 })
 
