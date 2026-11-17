@@ -79,7 +79,7 @@ const IconeCss = styled.img`
 `
 
 // Aviso, não é um botão: não leva a lugar nenhum
-const ReformaCss = styled.p`
+const EmBreveCss = styled.p`
   margin: 0 0 6px;
   padding: 14px 10px;
   color: var(--cor-texto);
@@ -119,7 +119,7 @@ export default function Home() {
         </ListaCss>
       </nav>
 
-      <ReformaCss>SITE EM REFORMA</ReformaCss>
+      <EmBreveCss>EM BREVE, MAIS MENSAGENS</EmBreveCss>
       <RodapeCss>Encontrou algum erro? Entre em contato!</RodapeCss>
     </PaginaCss>
   )

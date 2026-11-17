@@ -31,9 +31,10 @@ describe('página inicial', () => {
     expect(links.map((link) => link.getAttribute('href'))).toEqual(ativos.map((item) => '#' + item.rota))
   })
 
-  test('o aviso de reforma é só um aviso, não um botão', () => {
+  test('o aviso "em breve" é só um aviso, não um botão, e o de reforma saiu', () => {
     abrir('/')
-    expect(screen.getByText('SITE EM REFORMA')).toBeTruthy()
+    expect(screen.getByText('EM BREVE, MAIS MENSAGENS')).toBeTruthy()
+    expect(screen.queryByText(/reforma/i)).toBeNull()
     expect(screen.queryAllByRole('button')).toEqual([])
   })
 })
