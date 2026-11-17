@@ -25,14 +25,15 @@ src/
 │   │   ├── namorados.js ... (um por ocasião)
 │   │   └── index.js         junta todas
 │   ├── ocasioes.js          botões da página inicial e telas de escolha
-│   └── config.js            endereço do bucket S3
+│   └── config.js            endereço do bucket S3 e a chave do modo Natal
 ├── pages/
 │   ├── Home.jsx             página inicial
 │   ├── Ocasiao.jsx          tela de escolha (gênero / tipo)
 │   └── Mensagens.jsx        lista de áudios de uma página
 ├── components/
 │   ├── Cabecalho.jsx        banner do topo
-│   ├── Player.jsx           cartão de uma mensagem (tocar, parar, progresso)
+│   ├── Player.jsx           cartão de uma mensagem (tocar, parar, barra que se arrasta)
+│   ├── Neve.jsx             neve do modo Natal
 │   └── Duration.jsx         formata o tempo (m:ss)
 ├── utils/                   funções de apoio (links de áudio e do Google Drive)
 ├── styles/                  global.css (layout, fonte) e botoes.css
@@ -86,12 +87,15 @@ A rota e o botão aparecem sozinhos na tela de escolha da ocasião, na posição
 ### Datas comemorativas
 
 Em `MENU_INICIAL` (`src/data/ocasioes.js`), `ativo: true` mostra o botão na página inicial e
-`ativo: false` esconde. Dia das Mães, Dia dos Pais e Natal ficam desativados fora de época.
+`ativo: false` esconde. Dia das Mães e Dia dos Pais ficam desativados fora de época.
+O botão de Natal acompanha o modo Natal (abaixo).
 
-### Tema de Natal
+### Modo Natal
 
-Os pontos de troca estão comentados com `NATAL`: cor do `body` em `src/styles/global.css`,
-cor dos textos em `src/pages/Home.jsx` e a neve em `public/index.html`.
+Em `src/data/config.js`, `MODO_NATAL = true` liga tudo de uma vez: fundo azul, textos brancos
+(as cores ficam nas variáveis do início de `src/styles/global.css`), neve leve (`Neve.jsx`) e o
+botão de Natal no topo da página inicial. `MODO_NATAL = false` volta ao normal e esconde o botão.
+A neve respeita quem desativou animações no celular/computador.
 
 ## Testes
 

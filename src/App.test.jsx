@@ -2,6 +2,7 @@ import { render, screen, cleanup, within } from '@testing-library/react'
 
 import App from './App'
 import { PAGINAS } from './data/mensagens'
+import { MODO_NATAL } from './data/config'
 import { MENU_INICIAL, TELAS_DE_ESCOLHA, botoesDaTela } from './data/ocasioes'
 import { linkDoAudio } from './utils/audio'
 
@@ -34,6 +35,19 @@ describe('página inicial', () => {
     abrir('/')
     expect(screen.getByText('SITE EM REFORMA')).toBeTruthy()
     expect(screen.queryAllByRole('button')).toEqual([])
+  })
+})
+
+describe('modo Natal (MODO_NATAL em data/config.js)', () => {
+  test('liga e desliga juntos: tema, neve e botão de Natal na página inicial', () => {
+    abrir('/')
+    expect(document.body.classList.contains('tema-natal')).toBe(MODO_NATAL)
+    expect(screen.queryByTestId('neve') !== null).toBe(MODO_NATAL)
+
+    const itens = within(screen.getByRole('navigation', { name: 'Ocasiões' })).getAllByRole('link')
+    expect(itens.some((link) => link.getAttribute('href') === '#/natal')).toBe(MODO_NATAL)
+    // quando ligado, o Natal é o primeiro da lista
+    expect(itens[0].getAttribute('href') === '#/natal').toBe(MODO_NATAL)
   })
 })
 

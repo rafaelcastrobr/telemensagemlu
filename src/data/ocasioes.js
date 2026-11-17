@@ -1,3 +1,4 @@
+import { MODO_NATAL } from './config'
 import { PAGINAS } from './mensagens'
 
 import agradecimento from '../assets/icons/agradecimento.png'
@@ -12,7 +13,9 @@ import pai from '../assets/icons/pai.png'
 // Botões da página inicial, na ordem em que aparecem.
 // ativo: false esconde o botão (use nas datas comemorativas fora de época:
 // troque para true quando chegar a época e para false quando passar).
+// O botão de Natal acompanha o MODO_NATAL de config.js.
 export const MENU_INICIAL = [
+  { rota: '/natal', texto: 'NATAL', icone: natal, ativo: MODO_NATAL },
   { rota: '/namorados', texto: 'DIA DOS NAMORADOS', icone: flecha, ativo: true },
   { rota: '/dia-das-mulheres', texto: 'DIA DAS MULHERES', icone: mulher, ativo: true },
   { rota: '/aniversario', texto: 'ANIVERSÁRIOS', icone: aniversario, ativo: true },
@@ -20,7 +23,6 @@ export const MENU_INICIAL = [
   { rota: '/agradecimento', texto: 'AGRADECIMENTOS', icone: agradecimento, ativo: true },
   { rota: '/dia-das-maes', texto: 'DIA DAS MÂES', icone: maes, ativo: false },
   { rota: '/dia-dos-pais', texto: 'DIA DOS PAÍS', icone: pai, ativo: false },
-  { rota: '/natal', texto: 'NATAL', icone: natal, ativo: false },
 ]
 
 // Telas de escolha (a tela que mostra os botões de uma ocasião).

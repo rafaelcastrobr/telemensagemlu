@@ -11,11 +11,17 @@
   font-family: Oswald, sans-serif;
 }
 
-/* Cores do site, em variáveis (a tela inicial e os títulos usam estas). */
+/* Cores do site. O modo Natal (MODO_NATAL em src/data/config.js) troca todas de uma vez. */
 :root {
   --cor-fundo: #e2e2e2;
   --cor-titulo: #000;
   --cor-texto: blueviolet;
+}
+
+body.tema-natal {
+  --cor-fundo: #4158D0;
+  --cor-titulo: #fff;
+  --cor-texto: #fff;
 }
 
 body {
