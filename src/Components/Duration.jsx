@@ -1,18 +1,12 @@
-export default function Duration ({seconds }) {
+// Mostra segundos como m:ss (ex.: 75 -> 1:15)
+export default function Duration({ seconds }) {
+  const total = Math.max(0, Math.floor(seconds || 0))
+  const mm = Math.floor(total / 60)
+  const ss = String(total % 60).padStart(2, '0')
+
   return (
-    <time dateTime={`P${Math.round(seconds)}S`} >
-      {format(seconds)}
+    <time dateTime={`PT${total}S`}>
+      {mm}:{ss}
     </time>
   )
-}
-
-function format (seconds) {
-  const date = new Date(seconds * 1000)
-  const mm = date.getMinutes()
-  const ss = pad(date.getSeconds())
-  return `${mm}:${ss}`
-}
-
-function pad (string) {
-  return ('0' + string).slice(-2)
 }
