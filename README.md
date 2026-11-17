@@ -1,7 +1,7 @@
 # WhatsMensagem da Lú
 
 Site com mensagens em áudio para todas as ocasiões (aniversário, namorados, dia das mães, natal...).
-Feito com React (Create React App), react-router (HashRouter) e styled-components.
+Feito com React, Vite, react-router (HashRouter) e styled-components.
 
 No ar: https://whatsmensagemdalu.netlify.app
 
@@ -9,10 +9,11 @@ No ar: https://whatsmensagemdalu.netlify.app
 
 ```
 npm install
-npm start          # abre em http://localhost:3000
+npm start          # abre em http://localhost:3000 (npm run dev faz o mesmo)
 npm run test:ci    # roda os testes uma vez (npm test fica observando mudanças)
 npm run lint       # confere o código
 npm run build      # gera a pasta build/ para publicar
+npm run preview    # abre o site já montado (build/) para conferir antes de publicar
 ```
 
 ## Estrutura
@@ -33,11 +34,19 @@ src/
 ├── components/
 │   ├── Cabecalho.jsx        banner do topo
 │   ├── Player.jsx           cartão de uma mensagem (tocar, parar, barra que se arrasta)
+│   ├── PlayerDrive.jsx      cartão com o player do Google Drive (mensagens que ainda estão no Drive)
+│   ├── cartao.js            estilos do cartão (Player e PlayerDrive)
 │   ├── Neve.jsx             neve do modo Natal
 │   └── Duration.jsx         formata o tempo (m:ss)
 ├── utils/                   funções de apoio (links de áudio e do Google Drive)
 ├── styles/                  global.css (layout, fonte) e botoes.css
 └── assets/                  fonts, icons e images
+
+index.html                   página base (o site entra por src/main.jsx)
+vite.config.js               configuração do Vite e dos testes (Vitest)
+eslint.config.js             regras do npm run lint
+netlify.toml                 como o Netlify monta e publica o site
+public/                      arquivos copiados como estão (favicon.ico)
 ```
 
 As telas e as rotas são geradas a partir de `src/data`. Não é preciso criar arquivo de página
@@ -109,7 +118,10 @@ Os testes (`npm run test:ci`) protegem os erros mais fáceis de cometer ao mexer
 ## Publicação
 
 O site está no Netlify com deploy automático: um push na branch `master` publica sozinho.
-O build é `npm run build` e a pasta publicada é `build/`.
+As configurações ficam em `netlify.toml`: o build é `npm run build`, a pasta publicada é `build/`
+e o Node é o 22. Precisa de Node 20.19 ou mais novo para rodar na sua máquina.
+
+Se um build falhar, o Netlify mantém no ar a versão anterior.
 
 ## Créditos
 

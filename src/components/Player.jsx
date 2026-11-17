@@ -6,10 +6,14 @@ import styled from 'styled-components'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-import ReactPlayer from 'react-player'
+import ReactPlayerImportado from 'react-player'
 
 import Duration from './Duration'
 import { CartaoCss, LinhaCss, RotuloCss } from './cartao'
+
+// O react-player é um pacote CommonJS: o Vite entrega o módulo inteiro em vez do componente.
+// Esta linha pega o componente nos dois casos.
+const ReactPlayer = ReactPlayerImportado.default ?? ReactPlayerImportado
 
 
 const ControlesCss = styled.div`

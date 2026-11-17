@@ -1,22 +1,22 @@
-import { render, screen, fireEvent, cleanup, act } from '@testing-library/react'
+import { render, screen, fireEvent, act } from '@testing-library/react'
 
 import Player from './Player'
 
 // react-player falso: guarda as props recebidas e expõe o estado no DOM.
 const propsPorUrl = {}
 const chamadasDeSeek = []
-jest.mock('react-player', () => {
-  const React = require('react')
-  return React.forwardRef(function ReactPlayerFalso(props, ref) {
-    React.useImperativeHandle(ref, () => ({ seekTo: (...args) => chamadasDeSeek.push(args) }))
-    propsPorUrl[props.url] = props
-    return React.createElement('i', { 'data-testid': `audio-${props.url}`, 'data-playing': String(props.playing) })
-  })
+vi.mock('react-player', async () => {
+  const React = await import('react')
+  return {
+    default: React.forwardRef(function ReactPlayerFalso(props, ref) {
+      React.useImperativeHandle(ref, () => ({ seekTo: (...args) => chamadasDeSeek.push(args) }))
+      propsPorUrl[props.url] = props
+      return React.createElement('i', { 'data-testid': `audio-${props.url}`, 'data-playing': String(props.playing) })
+    }),
+  }
 })
 
 beforeEach(() => { chamadasDeSeek.length = 0 })
-afterEach(cleanup)
-
 const tocando = (url) => screen.getByTestId(`audio-${url}`).getAttribute('data-playing')
 const barra = (nome) => screen.getByRole('slider', { name: `Posição de ${nome}` })
 

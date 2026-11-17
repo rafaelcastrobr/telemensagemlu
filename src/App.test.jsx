@@ -1,4 +1,4 @@
-import { render, screen, cleanup, within } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 
 import App from './App'
 import { PAGINAS } from './data/mensagens'
@@ -8,16 +8,20 @@ import { linkDoAudio } from './utils/audio'
 import { idDoDrive } from './utils/drive'
 
 // O Player real toca áudio; nestes testes só importa o que a página entrega a ele.
-jest.mock('./components/Player', () => {
-  const React = require('react')
-  return function PlayerFalso({ link, children }) {
-    return React.createElement('div', { 'data-testid': 'player', 'data-link': link }, children)
+vi.mock('./components/Player', async () => {
+  const React = await import('react')
+  return {
+    default: function PlayerFalso({ link, children }) {
+      return React.createElement('div', { 'data-testid': 'player', 'data-link': link }, children)
+    },
   }
 })
-jest.mock('./components/PlayerDrive', () => {
-  const React = require('react')
-  return function PlayerDriveFalso({ id, children }) {
-    return React.createElement('div', { 'data-testid': 'player', 'data-link': `drive:${id}` }, children)
+vi.mock('./components/PlayerDrive', async () => {
+  const React = await import('react')
+  return {
+    default: function PlayerDriveFalso({ id, children }) {
+      return React.createElement('div', { 'data-testid': 'player', 'data-link': `drive:${id}` }, children)
+    },
   }
 })
 
@@ -25,8 +29,6 @@ function abrir(rota) {
   window.location.hash = '#' + rota
   return render(<App />)
 }
-
-afterEach(cleanup)
 
 describe('página inicial', () => {
   test('mostra só os itens ativos do menu, na ordem, cada um levando à sua tela', () => {

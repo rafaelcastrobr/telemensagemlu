@@ -1,8 +1,6 @@
-import { render, screen, cleanup } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
 import PlayerDrive from './PlayerDrive'
-
-afterEach(cleanup)
 
 describe('PlayerDrive', () => {
   test('mostra o rótulo e o player do Drive dentro do cartão', () => {
