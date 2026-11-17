@@ -4,15 +4,17 @@ import { BsFillPauseCircleFill, BsFillStopCircleFill } from 'react-icons/bs'
 
 import styled from 'styled-components'
 
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react'
 
 import ReactPlayer from 'react-player'
 
 
-const DivCss = styled.div`
+const BotaoCss = styled.button`
   display: flex;
   margin-left: 15px;
   cursor: pointer;
+  background: transparent;
+  border: none;
 `
 
 
@@ -23,64 +25,71 @@ const ContainerCss = styled.div`
   margin-bottom: 20px;
 `
 
-export default function Player(props) {
-  const [state, setState] = useState({
-    playing: false,
-    url: props.link,
-    play: props.play
-  })
+// Função que pausa o áudio que está tocando agora. Garante um áudio por vez na página.
+let pausarAtual = null
+
+export default function Player({ link, nome = 'mensagem' }) {
+  const [url, setUrl] = useState(link)
+  const [tocando, setTocando] = useState(false)
+
+  const pausar = useCallback(() => setTocando(false), [])
+
+  // Ao sair da página, esquece este player se ele era o "atual"
+  useEffect(() => {
+    return () => {
+      if (pausarAtual === pausar) pausarAtual = null
+    }
+  }, [pausar])
 
 
   function btnPlayPause() {
-    setState({
-      ...state,
-      url: props.link,
-      playing: !state.playing
-    })
+    if (!tocando) {
+      // vai começar a tocar: pausa o outro áudio que estiver tocando
+      if (pausarAtual && pausarAtual !== pausar) pausarAtual()
+      pausarAtual = pausar
+      setUrl(link)
+    }
+    setTocando(!tocando)
   }
 
 
   function btnStop() {
-    setState({
-      ...state,
-      url: null,
-      playing: false
-    })
+    if (pausarAtual === pausar) pausarAtual = null
+    setUrl(null)
+    setTocando(false)
   }
 
 
   return (
     <IconContext.Provider value={{ size: '50px', color: '#EE6C4D' }}>
       <ContainerCss>
-        <ReactPlayer url={state.url} playing={state.playing} width='0px' height='0px' />
-        <DivCss>
+        <ReactPlayer
+          url={url}
+          playing={tocando}
+          width='0px'
+          height='0px'
+          onEnded={pausar}
+          onError={pausar}
+        />
 
-        <BsFillStopCircleFill onClick={btnStop} />
-        </DivCss>
+        <BotaoCss type='button' onClick={btnStop} aria-label={`Parar ${nome}`}>
+          <BsFillStopCircleFill />
+        </BotaoCss>
 
-        {state.playing ?
-
+        {tocando ?
 
           <IconContext.Provider value={{ size: '50px', color: '#531c0e' }}>
-            <DivCss >
-              <BsFillPauseCircleFill onClick={btnPlayPause} />
-            </DivCss>
+            <BotaoCss type='button' onClick={btnPlayPause} aria-label={`Pausar ${nome}`}>
+              <BsFillPauseCircleFill />
+            </BotaoCss>
           </IconContext.Provider>
           :
-          <DivCss >
-            <FaPlayCircle onClick={btnPlayPause} />
-          </DivCss>
+          <BotaoCss type='button' onClick={btnPlayPause} aria-label={`Tocar ${nome}`}>
+            <FaPlayCircle />
+          </BotaoCss>
         }
-
-
 
       </ContainerCss>
     </IconContext.Provider>
   )
 }
-
-// https://drive.google.com/uc?id=1ls4MZbcu4KAIGFodhTHdz18-MQUA83A1#.mp3
-
-/*
-
-*/

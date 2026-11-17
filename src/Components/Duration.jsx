@@ -10,7 +10,6 @@ function format (seconds) {
   const date = new Date(seconds * 1000)
   const mm = date.getMinutes()
   const ss = pad(date.getSeconds())
-  console.log('se', seconds)
   return `${mm}:${ss}`
 }
 
